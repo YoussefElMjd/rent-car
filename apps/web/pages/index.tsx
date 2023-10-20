@@ -1,4 +1,5 @@
-import CarCard from "./../../../packages/ui/components/content/car-card/index";
+import React from "react";
+import Header from "./../../../packages/ui/components/content/header/index";
 export default function Home() {
-  return <CarCard></CarCard>;
+  return <Header></Header>;
 }

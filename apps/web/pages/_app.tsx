@@ -2,8 +2,15 @@
 import type { AppContext, AppProps } from "next/app";
 import App from "next/app";
 import React from "react";
-import { ChakraProvider, Link } from "@chakra-ui/react";
+import {
+  ChakraProvider,
+  ColorModeScript,
+  DarkMode,
+  Link,
+} from "@chakra-ui/react";
 import Head from "next/head";
+import COLORS from "./../../../packages/ui/constant/colors";
+import theme from "./theme";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -20,7 +27,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           rel="stylesheet"
         />
       </Head>
-      <ChakraProvider>
+      <ChakraProvider theme={theme}>
         <Component {...pageProps} />
       </ChakraProvider>
     </>
