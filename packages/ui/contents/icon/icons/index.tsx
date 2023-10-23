@@ -7,6 +7,7 @@ import { Localisation } from "./localisation";
 import { Phone } from "./phone";
 import { Price } from "./price";
 import { Snapchat } from "./snapchat";
+import { StepLine } from "./step_line";
 const Icons = {
   add: Add,
   localisation: Localisation,
@@ -17,6 +18,7 @@ const Icons = {
   phone: Phone,
   price: Price,
   snapchat: Snapchat,
+  stepLine: StepLine,
 };
 
 export default Icons;
