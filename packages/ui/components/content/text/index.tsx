@@ -6,8 +6,9 @@ import COLORS from "../../../constant/colors";
 export default function Text(props: ITextProps) {
   return (
     <ChakraText
-      w={"fit-content"}
-      h={"fit-content"}
+      {...props}
+      w={props.w ?? "fit-content"}
+      h={props.h ?? "fit-content"}
       fontFamily={"Plus Jakarta Sans"}
       fontSize={props.fontSize}
       fontStyle={"normal"}

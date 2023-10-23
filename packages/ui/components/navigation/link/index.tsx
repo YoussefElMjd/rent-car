@@ -12,6 +12,7 @@ export default function Link(props: IButtonProps) {
       _hover={{
         textDecoration: "underline",
         textDecorationColor: props.underLineColor ?? COLORS.Secondary.value,
+        textUnderlineOffset: "10px",
       }}
     >
       {props.children}
