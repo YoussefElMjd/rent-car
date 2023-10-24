@@ -7,12 +7,7 @@ import Button from "../../inputs/button";
 
 export default function Header() {
   return (
-    <HStack
-      padding={"28px 63.502px 28px 66px"}
-      alignItems={"center"}
-      w={"100%"}
-      spacing="117px"
-    >
+    <HStack alignItems={"center"} w={"100%"} spacing="117px">
       <Text color={COLORS.Secondary.value} fontSize="36px" fontWeight="700">
         RentCarEmirates
       </Text>

@@ -1,4 +1,4 @@
-import { Box, HStack, Img, VStack } from "@chakra-ui/react";
+import { Box, HStack, Img, Stack, VStack } from "@chakra-ui/react";
 import React from "react";
 import Text from "../text";
 import COLORS from "../../../constant/colors";
@@ -6,12 +6,17 @@ import Button from "../../inputs/button";
 
 export default function HomeSection() {
   return (
-    <HStack spacing={"100px"} padding="28px 0px 28px 66px">
+    <HStack
+      w={"100%"}
+      spacing={"100px"}
+      justifyContent={"center"}
+      alignItems={"center"}
+    >
       <VStack
         spacing="39px"
         alignItems={"left"}
         justifyContent={"left"}
-        w="40%"
+        w="30%"
       >
         <Text
           color={COLORS.Third.value}
@@ -62,10 +67,11 @@ export default function HomeSection() {
           </Text>
         </Button>
       </VStack>
-      <Box
-        w={"60%"}
-        h={"900px"}
-        backgroundImage={`url('/images/Class_G_Orange_outside_front.jpg')`}
+      <Img
+        bgColor={"transparent"}
+        w={"40%"}
+        h={"40%"}
+        src={`/images/Class_G_Orange.png`}
         backgroundSize="cover"
         backgroundPosition="center"
         backgroundRepeat="no-repeat"
