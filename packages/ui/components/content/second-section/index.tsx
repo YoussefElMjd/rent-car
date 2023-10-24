@@ -1,5 +1,5 @@
 import { Box, HStack, Stack, VStack } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Text from "../text";
 import COLORS from "../../../constant/colors";
 import StepCard from "../step-card";
@@ -30,7 +30,7 @@ export default function SecondSection() {
         </Text>
       </VStack>
 
-      <HStack spacing="0px" justifyContent={"center"} w="70%">
+      <HStack spacing="0px" justifyContent={"center"} w="100%">
         <StepCard
           name="localisation"
           title="Choose Location"

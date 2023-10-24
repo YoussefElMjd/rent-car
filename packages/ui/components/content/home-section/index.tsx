@@ -16,7 +16,7 @@ export default function HomeSection() {
         spacing="39px"
         alignItems={"left"}
         justifyContent={"left"}
-        w="30%"
+        w="50%"
       >
         <Text
           color={COLORS.Third.value}
@@ -67,16 +67,18 @@ export default function HomeSection() {
           </Text>
         </Button>
       </VStack>
-      <Img
-        bgColor={"transparent"}
-        w={"40%"}
-        h={"40%"}
-        src={`/images/Class_G_Orange.png`}
-        backgroundSize="cover"
-        backgroundPosition="center"
-        backgroundRepeat="no-repeat"
-        borderRadius="63px 0px 0px 0px"
-      />
+      <Stack w={"full"} alignItems={"flex-end"}>
+        <Img
+          w={"700px"}
+          h={"700px"}
+          bgColor={"transparent"}
+          src={`/images/class_g/Class_G_Orange_outside_front.jpg`}
+          backgroundSize="cover"
+          backgroundPosition="center"
+          backgroundRepeat="no-repeat"
+          borderRadius="63px 0px 0px 0px"
+        />
+      </Stack>
     </HStack>
   );
 }
