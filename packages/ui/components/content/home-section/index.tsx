@@ -1,4 +1,4 @@
-import { Box, HStack, Img, Stack, VStack } from "@chakra-ui/react";
+import { AspectRatio, Box, HStack, Img, Stack, VStack } from "@chakra-ui/react";
 import React from "react";
 import Text from "../text";
 import COLORS from "../../../constant/colors";
@@ -8,10 +8,29 @@ export default function HomeSection() {
   return (
     <HStack
       w={"100%"}
+      h={"600px"}
       spacing={"100px"}
       justifyContent={"center"}
       alignItems={"center"}
+      position={"relative"}
     >
+      <iframe
+        title="Class G Mansory"
+        tabIndex={-1}
+        webkit-playsinline=""
+        style={{
+          zIndex: -50,
+          position: "absolute",
+          width: "100%",
+          height: "100%",
+          left: 0,
+          right: 0,
+          top: 0,
+          bottom: 0,
+        }}
+        src="https://www.youtube.com/embed/kegO-wYVrmU?autoplay=1&mute=1&vq=hd1080&controls=0&loop=1&rel=0"
+        allowFullScreen
+      />
       <VStack
         spacing="39px"
         alignItems={"left"}
@@ -20,7 +39,7 @@ export default function HomeSection() {
       >
         <Text
           color={COLORS.Third.value}
-          fontSize={"14px"}
+          fontSize={["4px", "7px", "14px"]}
           fontWeight={"500"}
           lineHeight={"17px"}
         >
@@ -29,7 +48,7 @@ export default function HomeSection() {
         <VStack spacing={"24px"} w="fit-content" alignItems={"left"}>
           <Text
             color={COLORS.Secondary.value}
-            fontSize={"46px"}
+            fontSize={["12px", "33px", "46px"]}
             fontWeight={"800"}
             lineHeight={"121.2%"}
             textTransform={"uppercase"}
@@ -38,7 +57,7 @@ export default function HomeSection() {
           </Text>
           <Text
             color={COLORS.Third.value}
-            fontSize={"16px"}
+            fontSize={["5px", "10px", "16px"]}
             fontWeight={"500"}
             lineHeight={"26px"}
             letterSpacing={"-0.32px"}
@@ -58,7 +77,7 @@ export default function HomeSection() {
         >
           <Text
             color={COLORS.Secondary.value}
-            fontSize={"16px"}
+            fontSize={["5px", "10px", "16px"]}
             fontWeight={600}
             lineHeight={"24px"}
             letterSpacing={"-0.32px"}
@@ -67,10 +86,10 @@ export default function HomeSection() {
           </Text>
         </Button>
       </VStack>
-      <Stack w={"full"} alignItems={"flex-end"}>
+      {/* <Stack w={"full"} alignItems={"flex-end"}>
         <Img
-          w={"700px"}
-          h={"700px"}
+          w={["150px", "300px", "700px"]}
+          h={["150px", "300px", "700px"]}
           bgColor={"transparent"}
           src={`/images/class_g/Class_G_Orange_outside_front.jpg`}
           backgroundSize="cover"
@@ -78,7 +97,7 @@ export default function HomeSection() {
           backgroundRepeat="no-repeat"
           borderRadius="63px 0px 0px 0px"
         />
-      </Stack>
+      </Stack> */}
     </HStack>
   );
 }
