@@ -30,7 +30,7 @@ export default function SecondSection() {
         </Text>
       </VStack>
 
-      <HStack spacing="0px" justifyContent={"center"} w="100%">
+      <HStack w="100%" spacing="0px" justifyContent={"center"}>
         <StepCard
           name="localisation"
           title="Choose Location"

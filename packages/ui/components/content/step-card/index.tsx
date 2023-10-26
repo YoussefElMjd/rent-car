@@ -9,7 +9,7 @@ import Reveal from "../reveal";
 export default function StepCard(props: IStepCardProps) {
   return (
     <VStack
-      w="250px"
+      w="auto"
       spacing={"30px"}
       justifyContent={"center"}
       alignItems={"center"}
