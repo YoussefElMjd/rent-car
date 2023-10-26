@@ -3,6 +3,7 @@ import React from "react";
 import Text from "../text";
 import COLORS from "../../../constant/colors";
 import Button from "../../inputs/button";
+import VideoBackground from "../video-background";
 
 export default function HomeSection() {
   return (
@@ -14,22 +15,11 @@ export default function HomeSection() {
       alignItems={"center"}
       position={"relative"}
     >
-      <iframe
-        title="Class G Mansory"
-        tabIndex={-1}
-        webkit-playsinline=""
-        style={{
-          zIndex: -50,
-          position: "absolute",
-          width: "100%",
-          height: "100%",
-          left: 0,
-          right: 0,
-          top: 0,
-          bottom: 0,
-        }}
-        src="https://www.youtube.com/embed/kegO-wYVrmU?autoplay=1&mute=1&vq=hd1080&controls=0&loop=1&rel=0"
-        allowFullScreen
+      <VideoBackground
+        position={"absolute"}
+        src="https://www.youtube.com/embed/yAo7eSoq2_8"
+        idVideo="yAo7eSoq2_8"
+        h="600px"
       />
       <VStack
         spacing="39px"
@@ -39,7 +29,7 @@ export default function HomeSection() {
       >
         <Text
           color={COLORS.Third.value}
-          fontSize={["4px", "7px", "14px"]}
+          fontSize={["8px", "14px", "24px"]}
           fontWeight={"500"}
           lineHeight={"17px"}
         >
@@ -48,8 +38,8 @@ export default function HomeSection() {
         <VStack spacing={"24px"} w="fit-content" alignItems={"left"}>
           <Text
             color={COLORS.Secondary.value}
-            fontSize={["12px", "33px", "46px"]}
-            fontWeight={"800"}
+            fontSize={["12px", "33px", "56px"]}
+            fontWeight={"900"}
             lineHeight={"121.2%"}
             textTransform={"uppercase"}
           >
@@ -57,7 +47,7 @@ export default function HomeSection() {
           </Text>
           <Text
             color={COLORS.Third.value}
-            fontSize={["5px", "10px", "16px"]}
+            fontSize={["5px", "10px", "24px"]}
             fontWeight={"500"}
             lineHeight={"26px"}
             letterSpacing={"-0.32px"}
@@ -68,6 +58,7 @@ export default function HomeSection() {
             software will let you manage.
           </Text>
         </VStack>
+
         <Button
           padding={0}
           bgColor="transparent"

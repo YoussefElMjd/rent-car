@@ -134,7 +134,14 @@ export default function ThirdSection() {
           company and website
         </Text>
       </Box>
-      <HStack w="100%" overflow={"hidden"} flexWrap={"wrap"} spacing={"20px"}>
+      <HStack
+        w="100%"
+        overflow={"hidden"}
+        flexWrap={"wrap"}
+        spacing={"20px"}
+        justifyContent={"center"}
+        alignItems={"center"}
+      >
         {car.map((element) => element)}
       </HStack>
     </VStack>

@@ -12,7 +12,6 @@ export default function Reveal(props: IRevealProps) {
   const secondController = useAnimation();
 
   useEffect(() => {
-    console.log(inView);
     if (inView) {
       mainController.start("visible");
       secondController.start("visible");

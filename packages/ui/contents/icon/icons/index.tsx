@@ -5,7 +5,9 @@ import { Facebook } from "./facebook";
 import { Instagram } from "./instagram";
 import { Localisation } from "./localisation";
 import { NextArrow } from "./next-arrow";
+import { Pause } from "./pause";
 import { Phone } from "./phone";
+import { Play } from "./play";
 import { PreviousArrow } from "./previous-arrow";
 import { Price } from "./price";
 import { Snapchat } from "./snapchat";
@@ -23,6 +25,8 @@ const Icons = {
   stepLine: StepLine,
   previousArrow: PreviousArrow,
   nextArrow: NextArrow,
+  play: Play,
+  pause: Pause,
 };
 
 export default Icons;

@@ -7,6 +7,7 @@ export default function Button(props: IButtonProps) {
   return (
     <ChakraButton
       {...props}
+      ref={props.ref}
       border={props.border ?? "none"}
       _hover={{
         filter: "saturate(200%)",

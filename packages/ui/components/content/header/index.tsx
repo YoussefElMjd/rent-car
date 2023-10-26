@@ -7,16 +7,21 @@ import Button from "../../inputs/button";
 
 export default function Header() {
   return (
-    <HStack alignItems={"center"} w={"100%"} spacing="117px">
-      <Text color={COLORS.Secondary.value} fontSize="36px" fontWeight="700">
+    <HStack
+      alignItems={"center"}
+      w={"100%"}
+      spacing="7.3125rem"
+      padding="1.75rem 150px 1.75rem 9.375rem"
+    >
+      <Text color={COLORS.Secondary.value} fontSize="2.25rem" fontWeight="700">
         RentCarEmirates
       </Text>
-      <HStack spacing={"39px"} justifyContent={"right"} w="100%">
+      <HStack spacing={"2.4375rem"} justifyContent={"right"} w="100%">
         <Link
           href="https://github.com/"
           hoverFilter="opacity(80%)"
           color={COLORS.Third.value}
-          fontSize="16px"
+          fontSize="1rem"
           fontWeight="700"
         >
           Home
@@ -25,7 +30,7 @@ export default function Header() {
           href="https://github.com/"
           hoverFilter="opacity(80%)"
           color={COLORS.Third.value}
-          fontSize="16px"
+          fontSize="1rem"
           fontWeight="700"
         >
           How it Work
@@ -34,7 +39,7 @@ export default function Header() {
           href="https://github.com/"
           hoverFilter="opacity(80%)"
           color={COLORS.Third.value}
-          fontSize="16px"
+          fontSize="1rem"
           fontWeight="700"
         >
           Rental Details
@@ -43,7 +48,7 @@ export default function Header() {
           href="https://github.com/"
           hoverFilter="opacity(80%)"
           color={COLORS.Third.value}
-          fontSize="16px"
+          fontSize="1rem"
           fontWeight="700"
         >
           Why Choose Us
@@ -52,32 +57,32 @@ export default function Header() {
           href="https://github.com/"
           hoverFilter="opacity(80%)"
           color={COLORS.Third.value}
-          fontSize="16px"
+          fontSize="1rem"
           fontWeight="700"
         >
           Testimonial
         </Link>
 
         <Box
-          h="21px"
+          h="1.3125rem"
           bg={COLORS.Secondary.value}
-          w="1px"
-          padding="0px"
-          margin={"-20px"}
-          marginRight={"-32px"}
+          w=".0625rem"
+          padding="0rem"
+          margin={"-1.25rem"}
+          marginRight={"-2rem"}
         />
         <HStack>
           <Button
             bgColor={"transparent"}
-            w="82px"
-            h="38px"
+            w="5.125rem"
+            h="2.375rem"
             _hover={{
               filter: "saturate(200%)",
             }}
           >
             <Text
               color={COLORS.Third.value}
-              fontSize={"14px"}
+              fontSize={".875rem"}
               textDecoration={"underline"}
             >
               Register
@@ -85,14 +90,14 @@ export default function Header() {
           </Button>
           <Button
             bgColor={COLORS.Secondary.value}
-            w="82px"
-            h="38px"
-            borderRadius="5px"
+            w="5.125rem"
+            h="2.375rem"
+            borderRadius=".3125rem"
             _hover={{
               filter: "saturate(200%)",
             }}
           >
-            <Text color={COLORS.Third.value} fontSize={"14px"}>
+            <Text color={COLORS.Third.value} fontSize={".875rem"}>
               Login
             </Text>
           </Button>
