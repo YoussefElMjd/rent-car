@@ -10,9 +10,9 @@ export default function VideoBackground(props: IVideoProps) {
       mt="4"
       w={props.w ?? "100%"}
       h={props.h}
-      zIndex={-1}
       boxShadow={"0px 0px 50px -5px " + COLORS.Third.value}
       overflow={"hidden"}
+      backgroundColor={"rgba(0,0,0,0.2)"}
     >
       <AspectRatio ratio={16 / 9}>
         <iframe

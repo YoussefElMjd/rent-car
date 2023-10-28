@@ -26,6 +26,7 @@ export default function HomeSection() {
         alignItems={"left"}
         justifyContent={"left"}
         w="50%"
+        zIndex={5}
       >
         <Text
           color={COLORS.Third.value}
