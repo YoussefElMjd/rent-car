@@ -6,6 +6,7 @@ import SecondSection from "./../../../packages/ui/components/content/second-sect
 import { VStack } from "@chakra-ui/react";
 import ThirdSection from "./../../../packages/ui/components/content/third-section/index";
 import AudioPlayer from "./../../../packages/ui/components/content/audio-player/index";
+import ContactSection from "./../../../packages/ui/components/content/contact-section/index";
 export default function Home() {
   return (
     <VStack>
@@ -16,6 +17,8 @@ export default function Home() {
       <SecondSection />
       <SectionSplit />
       <ThirdSection />
+      <SectionSplit />
+      <ContactSection />
     </VStack>
   );
 }

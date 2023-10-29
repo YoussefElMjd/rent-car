@@ -52,7 +52,7 @@ export default function HomeSection() {
             fontWeight={"500"}
             lineHeight={"26px"}
             letterSpacing={"-0.32px"}
-            opacity="0.45"
+            opacity="0.80"
           >
             Our Car Rental online booking system designed to meet the specific
             needs of car rental business owners. This easy-to-use car rental

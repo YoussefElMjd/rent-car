@@ -11,7 +11,7 @@ export default function Header() {
       alignItems={"center"}
       w={"100%"}
       spacing="7.3125rem"
-      padding="1.75rem 150px 1.75rem 9.375rem"
+      padding="1.75rem 9.375rem 1.75rem 9.375rem"
     >
       <Text color={COLORS.Secondary.value} fontSize="2.25rem" fontWeight="700">
         RentCarEmirates
