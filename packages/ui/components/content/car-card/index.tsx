@@ -113,7 +113,13 @@ export default function CarCard(props: ICarCardProps) {
       </Reveal>
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay backdropFilter="auto" backdropBlur="2px" />
-        <ModalContent minW="800px" h="800px" borderRadius={"15px"}>
+        <ModalContent
+          minW="800px"
+          h="800px"
+          justifyContent="center"
+          alignItems="center"
+          borderRadius={"15px"}
+        >
           <VStack>
             <Text
               color={COLORS.Secondary.value}

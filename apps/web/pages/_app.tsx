@@ -2,15 +2,9 @@
 import type { AppContext, AppProps } from "next/app";
 import App from "next/app";
 import React from "react";
-import {
-  ChakraProvider,
-  ColorModeScript,
-  DarkMode,
-  Link,
-} from "@chakra-ui/react";
+import { ChakraProvider } from "@chakra-ui/react";
 import Head from "next/head";
-import COLORS from "./../../../packages/ui/constant/colors";
-import theme from "./theme";
+import theme from "../../../packages/ui/pages/theme";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

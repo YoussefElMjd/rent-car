@@ -7,9 +7,10 @@ import { VStack } from "@chakra-ui/react";
 import ThirdSection from "./../../../packages/ui/components/content/third-section/index";
 import AudioPlayer from "./../../../packages/ui/components/content/audio-player/index";
 import ContactSection from "./../../../packages/ui/components/content/contact-section/index";
+import ReviewSection from "./../../../packages/ui/components/content/review-section/index";
 export default function Home() {
   return (
-    <VStack>
+    <VStack overflow={"hidden"}>
       <AudioPlayer />
       <Header />
       <HomeSection />
@@ -19,6 +20,9 @@ export default function Home() {
       <ThirdSection />
       <SectionSplit />
       <ContactSection />
+      <SectionSplit />
+      <ReviewSection />
+      <SectionSplit />
     </VStack>
   );
 }

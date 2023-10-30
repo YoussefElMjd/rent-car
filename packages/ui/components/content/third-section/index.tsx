@@ -5,6 +5,7 @@ import COLORS from "../../../constant/colors";
 import StepCard from "../step-card";
 import Icon from "../../../contents/icon";
 import CarCard from "../car-card";
+import TitleContent from "../Title-content";
 
 export default function ThirdSection() {
   const car = [
@@ -118,22 +119,12 @@ export default function ThirdSection() {
     />,
   ];
   return (
-    <VStack justifyContent={"center"} alignItems={"center"}>
-      <Text color={COLORS.Secondary.value} fontSize={"48px"} fontWeight={500}>
-        Most popular car rental deals
-      </Text>
-      <Box w="500px" marginBottom={"50px"}>
-        <Text
-          color={COLORS.Third.value}
-          fontSize={"18px"}
-          fontWeight={400}
-          textAlign={"center"}
-          lineHeight={"27px"}
-        >
-          A high-performing web-based car rental system for any rent-a-car
-          company and website
-        </Text>
-      </Box>
+    <VStack justifyContent={"center"} alignItems={"center"} spacing={"50px"}>
+      <TitleContent
+        title="Most popular car rental deals"
+        content="A high-performing web-based car rental system for any rent-a-car
+          company and website"
+      />
       <HStack
         w="100%"
         overflow={"hidden"}
