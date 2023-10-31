@@ -5,10 +5,11 @@ import COLORS from "../../../constant/colors";
 import IconText from "../icon-text";
 import Reveal from "../reveal";
 import TitleContent from "../Title-content";
+import IContactProps from "./props";
 
-export default function ContactSection() {
+export default function ContactSection(props: IContactProps) {
   return (
-    <VStack spacing={"2.5rem"} w="full">
+    <VStack ref={props.ref} spacing={"2.5rem"} w="full">
       <TitleContent
         title="Why choose us"
         content="A high-performing web-based car rental system for any rent-a-car

@@ -1,12 +1,11 @@
-import { Box, HStack, Stack } from "@chakra-ui/react";
+import { Box, HStack, forwardRef } from "@chakra-ui/react";
 import React from "react";
 import COLORS from "../../../constant/colors";
-import { motion } from "framer-motion";
 import ISectionSplitProps from "./props";
 
-export default function SectionSplit(props: ISectionSplitProps) {
+const SectionSplit = forwardRef((props: ISectionSplitProps, ref) => {
   return (
-    <HStack w={"100%"}>
+    <HStack w={"100%"} ref={ref}>
       <Box
         opacity={props.opacity}
         margin="5rem 3.75rem 3.75rem 3.75rem"
@@ -20,4 +19,5 @@ export default function SectionSplit(props: ISectionSplitProps) {
       />
     </HStack>
   );
-}
+});
+export default SectionSplit;

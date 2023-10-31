@@ -1,14 +1,13 @@
-import { Box, HStack, Stack, VStack } from "@chakra-ui/react";
-import React, { useEffect, useRef } from "react";
-import Text from "../text";
-import COLORS from "../../../constant/colors";
+import { HStack, Stack, VStack } from "@chakra-ui/react";
+import React from "react";
 import StepCard from "../step-card";
 import Icon from "../../../contents/icon";
 import TitleContent from "../Title-content";
+import IStepProps from "./props";
 
-export default function SecondSection() {
+export default function StepSection(props: IStepProps) {
   return (
-    <VStack spacing={"3rem"}>
+    <VStack ref={props.ref} spacing={"3rem"}>
       <TitleContent
         title="How it work"
         content="A high-performing web-based car rental system for any rent-a-car

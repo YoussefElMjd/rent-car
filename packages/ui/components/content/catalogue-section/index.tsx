@@ -6,8 +6,9 @@ import StepCard from "../step-card";
 import Icon from "../../../contents/icon";
 import CarCard from "../car-card";
 import TitleContent from "../Title-content";
+import ICatalogueProps from "./props";
 
-export default function ThirdSection() {
+export default function CatalogueSection(props: ICatalogueProps) {
   const car = [
     <CarCard
       title="Class G Mansory"
@@ -120,6 +121,7 @@ export default function ThirdSection() {
   ];
   return (
     <VStack
+      ref={props.ref}
       justifyContent={"center"}
       alignItems={"center"}
       spacing={"3.125rem"}
@@ -137,7 +139,7 @@ export default function ThirdSection() {
         justifyContent={"center"}
         alignItems={"center"}
       >
-        {car.map((element) => element)}
+        {car.map((element, i) => element)}
       </HStack>
     </VStack>
   );

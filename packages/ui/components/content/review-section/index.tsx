@@ -5,8 +5,9 @@ import Review from "../review";
 import Button from "../../inputs/button";
 import COLORS from "../../../constant/colors";
 import Icon from "../../../contents/icon";
+import IReviewProps from "./props";
 
-export default function ReviewSection() {
+export default function ReviewSection(props: IReviewProps) {
   const [scrollX, setScrollX] = useState(0);
   const [scrollPourcentage, setScrollPourcentage] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -45,7 +46,7 @@ export default function ReviewSection() {
   };
 
   return (
-    <VStack w="full" spacing="3.125rem">
+    <VStack ref={props.ref} w="full" spacing="3.125rem">
       <TitleContent
         title="Trusted by Thousands of 
 Happy Customer"

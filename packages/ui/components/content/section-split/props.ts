@@ -3,4 +3,5 @@ export default interface ISectionSplitProps {
   w?: string;
   h?: string;
   opacity?: string;
+  ref?: React.RefObject<HTMLDivElement>;
 }

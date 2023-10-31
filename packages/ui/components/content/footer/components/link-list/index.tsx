@@ -18,8 +18,8 @@ export default function LinkList(props: ILinkListProps) {
         {props.title}
       </Text>
 
-      {props.content.map((e) => (
-        <Link href={e.href} isExternal>
+      {props.content.map((e, i) => (
+        <Link href={e.href} isExternal key={i}>
           <Text
             color={COLORS.Secondary.value}
             fontSize={"1rem"}

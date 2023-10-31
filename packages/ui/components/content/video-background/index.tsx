@@ -20,7 +20,7 @@ export default function VideoBackground(props: IVideoProps) {
           src={
             props.src +
             "?&vq=hd1080&vw=hd1080&start=3&mute=1&autoplay=1&controls=0&loop=1&rel=0&modestbranding=0&showinfo=0&playlist=" +
-            props.idVideo
+            props.idvideo
           }
           tabIndex={-1}
           webkit-playsinline=""

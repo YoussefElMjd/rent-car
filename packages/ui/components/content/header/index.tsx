@@ -4,8 +4,9 @@ import Text from "../text";
 import COLORS from "../../../constant/colors";
 import Link from "../../navigation/link";
 import Button from "../../inputs/button";
+import IHeaderProps from "./props";
 
-export default function Header() {
+export default function Header(props: IHeaderProps) {
   return (
     <HStack
       alignItems={"center"}
@@ -18,8 +19,7 @@ export default function Header() {
       </Text>
       <HStack spacing={"2.4375rem"} justifyContent={"right"} w="100%">
         <Link
-          href="https://github.com/"
-          hoverFilter="opacity(80%)"
+          onClick={() => props.onLinkClick("home")}
           color={COLORS.Third.value}
           fontSize="1rem"
           fontWeight="700"
@@ -27,8 +27,7 @@ export default function Header() {
           Home
         </Link>
         <Link
-          href="https://github.com/"
-          hoverFilter="opacity(80%)"
+          onClick={() => props.onLinkClick("step")}
           color={COLORS.Third.value}
           fontSize="1rem"
           fontWeight="700"
@@ -36,17 +35,15 @@ export default function Header() {
           How it Work
         </Link>
         <Link
-          href="https://github.com/"
-          hoverFilter="opacity(80%)"
+          onClick={() => props.onLinkClick("catalogue")}
           color={COLORS.Third.value}
           fontSize="1rem"
           fontWeight="700"
         >
-          Rental Details
+          Catalogues
         </Link>
         <Link
-          href="https://github.com/"
-          hoverFilter="opacity(80%)"
+          onClick={() => props.onLinkClick("contact")}
           color={COLORS.Third.value}
           fontSize="1rem"
           fontWeight="700"
@@ -54,13 +51,12 @@ export default function Header() {
           Why Choose Us
         </Link>
         <Link
-          href="https://github.com/"
-          hoverFilter="opacity(80%)"
+          onClick={() => props.onLinkClick("review")}
           color={COLORS.Third.value}
           fontSize="1rem"
           fontWeight="700"
         >
-          Testimonial
+          Review
         </Link>
 
         <Box

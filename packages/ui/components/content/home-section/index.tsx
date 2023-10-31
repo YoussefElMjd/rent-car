@@ -1,13 +1,15 @@
-import { AspectRatio, Box, HStack, Img, Stack, VStack } from "@chakra-ui/react";
+import { HStack, VStack, forwardRef } from "@chakra-ui/react";
 import React from "react";
 import Text from "../text";
 import COLORS from "../../../constant/colors";
 import Button from "../../inputs/button";
 import VideoBackground from "../video-background";
+import IHomeProps from "./props";
 
-export default function HomeSection() {
+const HomeSection = forwardRef((props: IHomeProps, ref) => {
   return (
     <HStack
+      ref={ref}
       w={"100%"}
       h={"37.5rem"}
       spacing={"6.25rem"}
@@ -18,7 +20,7 @@ export default function HomeSection() {
       <VideoBackground
         position={"absolute"}
         src="https://www.youtube.com/embed/yAo7eSoq2_8"
-        idVideo="yAo7eSoq2_8"
+        idvideo="yAo7eSoq2_8"
         h="37.5rem"
       />
       <VStack
@@ -92,4 +94,5 @@ export default function HomeSection() {
       </Stack> */}
     </HStack>
   );
-}
+});
+export default HomeSection;
