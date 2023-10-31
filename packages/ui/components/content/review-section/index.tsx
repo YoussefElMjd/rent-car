@@ -1,6 +1,5 @@
-import { Box, HStack, VStack, baseTheme } from "@chakra-ui/react";
+import { Box, HStack, VStack } from "@chakra-ui/react";
 import React, { useRef, useState } from "react";
-import Text from "../text";
 import TitleContent from "../Title-content";
 import Review from "../review";
 import Button from "../../inputs/button";
@@ -15,7 +14,7 @@ export default function ReviewSection() {
   const handleScroll = (direction: string) => {
     const container = containerRef.current;
     if (container) {
-      const scrollAmount = 600;
+      const scrollAmount = 700;
       const maxScrollable = container.scrollWidth - container.clientWidth;
       if (direction === "left" && scrollX > 0) {
         if (container) {
@@ -89,49 +88,49 @@ Happy Customer"
           name="KobaLaD"
           location="France"
           note="4.5"
-          review="Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best"
+          review="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tincidunt vestibulum arcu, ultrices malesuada enim semper sit amet. "
         />
         <Review
           name="KobaLaD"
           location="France"
           note="4.5"
-          review="Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best"
+          review="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tincidunt vestibulum arcu, ultrices malesuada enim semper sit amet. "
         />
         <Review
           name="KobaLaD"
           location="France"
           note="4.5"
-          review="Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best"
+          review="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tincidunt vestibulum arcu, ultrices malesuada enim semper sit amet. "
         />
         <Review
           name="KobaLaD"
           location="France"
           note="4.5"
-          review="Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best"
+          review="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tincidunt vestibulum arcu, ultrices malesuada enim semper sit amet. "
         />{" "}
         <Review
           name="KobaLaD"
           location="France"
           note="4.5"
-          review="Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best"
+          review="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tincidunt vestibulum arcu, ultrices malesuada enim semper sit amet. "
         />{" "}
         <Review
           name="KobaLaD"
           location="France"
           note="4.5"
-          review="Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best"
+          review="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tincidunt vestibulum arcu, ultrices malesuada enim semper sit amet. "
         />{" "}
         <Review
           name="KobaLaD"
           location="France"
           note="4.5"
-          review="Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best"
+          review="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tincidunt vestibulum arcu, ultrices malesuada enim semper sit amet. "
         />{" "}
         <Review
           name="KobaLaD"
           location="France"
           note="4.5"
-          review="Wow... I am very happy to use this VPN, it turned out to be more than my expectations and so far there have been no problems. LaslesVPN always the best"
+          review="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tincidunt vestibulum arcu, ultrices malesuada enim semper sit amet. "
         />
         <Button
           position={"absolute"}

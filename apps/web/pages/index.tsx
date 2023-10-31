@@ -9,9 +9,10 @@ import AudioPlayer from "./../../../packages/ui/components/content/audio-player/
 import ContactSection from "./../../../packages/ui/components/content/contact-section/index";
 import ReviewSection from "./../../../packages/ui/components/content/review-section/index";
 import Footer from "./../../../packages/ui/components/content/footer/index";
+import COLORS from "../../../packages/ui/constant/colors";
 export default function Home() {
   return (
-    <VStack overflow={"hidden"}>
+    <VStack>
       <AudioPlayer />
       <Header />
       <HomeSection />

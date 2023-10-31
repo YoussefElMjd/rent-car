@@ -16,7 +16,7 @@ export default function SecondSection() {
       />
       <HStack w="100%" spacing="0px" justifyContent={"center"}>
         <StepCard
-          name="localisation"
+          name="localisationBig"
           title="Choose Location"
           content="Aliquam erat volutpat. Integer malesuada turpis id fringilla suscipit. Maecenas ultrices, orci vitae convallis mattis."
         />
@@ -28,7 +28,7 @@ export default function SecondSection() {
           title="Pick-up Date"
           content="Aliquam erat volutpat. Integer malesuada turpis id fringilla suscipit. Maecenas ultrices, orci vitae convallis mattis."
         />
-        <Stack>
+        <Stack w="fit-content">
           <Icon name="stepLine" />
         </Stack>
         <StepCard

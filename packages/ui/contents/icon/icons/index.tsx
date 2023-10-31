@@ -3,7 +3,7 @@ import { Calendar } from "./calendar";
 import { Car } from "./car";
 import { Facebook } from "./facebook";
 import { Instagram } from "./instagram";
-import { Localisation } from "./localisation";
+import { Localisation, LocalisationBig } from "./localisation";
 import { NextArrow } from "./next-arrow";
 import { Pause } from "./pause";
 import { Phone } from "./phone";
@@ -15,6 +15,7 @@ import { StepLine } from "./step_line";
 const Icons = {
   add: Add,
   localisation: Localisation,
+  localisationBig: LocalisationBig,
   calendar: Calendar,
   car: Car,
   facebook: Facebook,
