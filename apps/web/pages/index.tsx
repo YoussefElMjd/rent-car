@@ -8,6 +8,7 @@ import ThirdSection from "./../../../packages/ui/components/content/third-sectio
 import AudioPlayer from "./../../../packages/ui/components/content/audio-player/index";
 import ContactSection from "./../../../packages/ui/components/content/contact-section/index";
 import ReviewSection from "./../../../packages/ui/components/content/review-section/index";
+import Footer from "./../../../packages/ui/components/content/footer/index";
 export default function Home() {
   return (
     <VStack overflow={"hidden"}>
@@ -23,6 +24,7 @@ export default function Home() {
       <SectionSplit />
       <ReviewSection />
       <SectionSplit />
+      <Footer />
     </VStack>
   );
 }
