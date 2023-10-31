@@ -50,15 +50,13 @@ export default function ReviewSection(props: IReviewProps) {
       <TitleContent
         title="Trusted by Thousands of 
 Happy Customer"
-        content="A high-performing web-based car rental system for any rent-a-car company and website
-"
+        content="A high-performing web-based car rental system for any rent-a-car company and website"
       />
       <HStack
         ref={containerRef}
         spacing={"3.125rem"}
         overflowX={"scroll"}
         w="80%"
-        overscrollBehavior={"contain"}
         onScroll={handleOnScroll}
         sx={{
           "&::-webkit-scrollbar": {
@@ -108,25 +106,25 @@ Happy Customer"
           location="France"
           note="4.5"
           review="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tincidunt vestibulum arcu, ultrices malesuada enim semper sit amet. "
-        />{" "}
+        />
         <Review
           name="KobaLaD"
           location="France"
           note="4.5"
           review="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tincidunt vestibulum arcu, ultrices malesuada enim semper sit amet. "
-        />{" "}
+        />
         <Review
           name="KobaLaD"
           location="France"
           note="4.5"
           review="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tincidunt vestibulum arcu, ultrices malesuada enim semper sit amet. "
-        />{" "}
+        />
         <Review
           name="KobaLaD"
           location="France"
           note="4.5"
           review="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tincidunt vestibulum arcu, ultrices malesuada enim semper sit amet. "
-        />{" "}
+        />
         <Review
           name="KobaLaD"
           location="France"
