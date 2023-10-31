@@ -8,14 +8,14 @@ import Reveal from "../reveal";
 
 export default function IconText(props: IIConTextProps) {
   return (
-    <HStack spacing={"28px"} w={"500px"} alignItems={"left"}>
+    <HStack spacing={"1.75rem"} w={"31.25rem"} alignItems={"left"}>
       <Stack
         bgColor={COLORS.Secondary.value}
-        borderRadius={"10px"}
-        minW="52px"
-        minH="52px"
-        w={"52px"}
-        h="52px"
+        borderRadius={".625rem"}
+        minW="3.25rem"
+        minH="3.25rem"
+        w={"3.25rem"}
+        h="3.25rem"
         justifyContent={"center"}
         alignItems={"center"}
       >
@@ -24,21 +24,21 @@ export default function IconText(props: IIConTextProps) {
       <VStack alignItems={"left"} spacing={"0"}>
         <Text
           color={COLORS.Secondary.value}
-          fontSize={"22px"}
+          fontSize={"1.375rem"}
           fontWeight={"600"}
           textAlign={"left"}
-          lineHeight={"33px"}
-          letterSpacing={"-0.44px"}
+          lineHeight={"2.0625rem"}
+          letterSpacing={"-0.0275rem"}
         >
           {props.title}
         </Text>
         <Text
           color={COLORS.Third.value}
-          fontSize={"16px"}
+          fontSize={"1rem"}
           fontWeight={"400"}
           textAlign={"left"}
-          lineHeight={"28px"}
-          letterSpacing={"-0.32px"}
+          lineHeight={"1.75rem"}
+          letterSpacing={"-0.02rem"}
         >
           {props.content}
         </Text>

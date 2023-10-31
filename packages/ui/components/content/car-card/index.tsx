@@ -53,57 +53,61 @@ export default function CarCard(props: ICarCardProps) {
 
   return (
     <VStack
-      padding={"24px"}
+      padding={"1.5rem"}
       bgColor={COLORS.Third.value}
-      w="304px"
-      h="450px"
-      borderRadius={"10px"}
-      spacing={"0px"}
+      w="19rem"
+      h="28.125rem"
+      borderRadius={".625rem"}
+      spacing={"0rem"}
     >
       <Reveal>
-        <Text color={COLORS.Secondary.value} fontSize={"20px"} fontWeight={700}>
+        <Text
+          color={COLORS.Secondary.value}
+          fontSize={"1.25rem"}
+          fontWeight={700}
+        >
           {props.title}
         </Text>
       </Reveal>
       <Reveal>
-        <Stack h={"300px"} w="full" position={"relative"}>
-          <Img height="300px" src={props.pictures[1]} onClick={onOpen} />
+        <Stack h={"18.75rem"} w="full" position={"relative"}>
+          <Img height="18.75rem" src={props.pictures[1]} onClick={onOpen} />
         </Stack>
       </Reveal>
       <Reveal>
         <HStack
           w="100%"
           justifyContent={"space-between"}
-          marginInlineStart={"0px"}
-          paddingInlineStart={"0px"}
+          marginInlineStart={"0rem"}
+          paddingInlineStart={"0rem"}
         >
-          <HStack spacing={"0px"}>
+          <HStack spacing={"0rem"}>
             <Text
               color={COLORS.Secondary.value}
-              fontSize={"20px"}
+              fontSize={"1.25rem"}
               fontWeight={700}
             >
               €{props.pricePerDay}.00/
             </Text>
             <Text
               color={COLORS.Fourth.value}
-              fontSize={"14px"}
+              fontSize={".875rem"}
               fontWeight={700}
-              paddingTop={"5px"}
+              paddingTop={".3125rem"}
             >
               day
             </Text>
           </HStack>
           <Button
-            w="116px"
-            h="44px"
+            w="7.25rem"
+            h="2.75rem"
             bgColor={COLORS.Primary.value}
             hoverBgColor={COLORS.Primary.value}
             onClick={() => props.onClick}
           >
             <Text
               color={COLORS.Secondary.value}
-              fontSize={"16px"}
+              fontSize={"1rem"}
               fontWeight={"600"}
             >
               Rent now
@@ -112,18 +116,18 @@ export default function CarCard(props: ICarCardProps) {
         </HStack>
       </Reveal>
       <Modal isOpen={isOpen} onClose={onClose}>
-        <ModalOverlay backdropFilter="auto" backdropBlur="2px" />
+        <ModalOverlay backdropFilter="auto" backdropBlur=".125rem" />
         <ModalContent
-          minW="800px"
-          h="800px"
+          minW="50rem"
+          h="50rem"
           justifyContent="center"
           alignItems="center"
-          borderRadius={"15px"}
+          borderRadius={".9375rem"}
         >
           <VStack>
             <Text
               color={COLORS.Secondary.value}
-              fontSize={"30px"}
+              fontSize={"1.875rem"}
               fontWeight={"700"}
               textTransform={"uppercase"}
             >
@@ -147,7 +151,7 @@ export default function CarCard(props: ICarCardProps) {
                 </Button>
                 <motion.img
                   animate={controls}
-                  style={{ height: "700px", borderRadius: "25px" }}
+                  style={{ height: "43.75rem", borderRadius: "1.5625rem" }}
                   src={props.pictures[index]}
                 />
                 <Button

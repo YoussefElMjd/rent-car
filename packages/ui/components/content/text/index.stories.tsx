@@ -16,6 +16,6 @@ export const Title = Template.bind({});
 Title.args = {
   children: "RentCarEmirats",
   color: COLORS.Secondary.value,
-  fontSize: "36px",
+  fontSize: "2.25rem",
   fontWeight: "700",
 };

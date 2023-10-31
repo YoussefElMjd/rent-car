@@ -9,8 +9,8 @@ export default function HomeSection() {
   return (
     <HStack
       w={"100%"}
-      h={"600px"}
-      spacing={"100px"}
+      h={"37.5rem"}
+      spacing={"6.25rem"}
       justifyContent={"center"}
       alignItems={"center"}
       position={"relative"}
@@ -19,10 +19,10 @@ export default function HomeSection() {
         position={"absolute"}
         src="https://www.youtube.com/embed/yAo7eSoq2_8"
         idVideo="yAo7eSoq2_8"
-        h="600px"
+        h="37.5rem"
       />
       <VStack
-        spacing="39px"
+        spacing="2.4375rem"
         alignItems={"left"}
         justifyContent={"left"}
         w="50%"
@@ -30,16 +30,16 @@ export default function HomeSection() {
       >
         <Text
           color={COLORS.Third.value}
-          fontSize={["8px", "14px", "24px"]}
+          fontSize={[".5rem", ".875rem", "1.5rem"]}
           fontWeight={"500"}
-          lineHeight={"17px"}
+          lineHeight={"1.0625rem"}
         >
           100% Trusted Car rentel platform in Dubaï
         </Text>
-        <VStack spacing={"24px"} w="fit-content" alignItems={"left"}>
+        <VStack spacing={"1.5rem"} w="fit-content" alignItems={"left"}>
           <Text
             color={COLORS.Secondary.value}
-            fontSize={["12px", "33px", "56px"]}
+            fontSize={[".75rem", "2.0625rem", "3.5rem"]}
             fontWeight={"900"}
             lineHeight={"121.2%"}
             textTransform={"uppercase"}
@@ -48,10 +48,10 @@ export default function HomeSection() {
           </Text>
           <Text
             color={COLORS.Third.value}
-            fontSize={["5px", "10px", "24px"]}
+            fontSize={[".3125rem", ".625rem", "1.5rem"]}
             fontWeight={"500"}
-            lineHeight={"26px"}
-            letterSpacing={"-0.32px"}
+            lineHeight={"1.625rem"}
+            letterSpacing={"-0.02rem"}
             opacity="0.80"
           >
             Our Car Rental online booking system designed to meet the specific
@@ -64,15 +64,15 @@ export default function HomeSection() {
           padding={0}
           bgColor="transparent"
           width={"fit-content"}
-          height={"24px"}
+          height={"1.5rem"}
           justifyContent={"center"}
         >
           <Text
             color={COLORS.Secondary.value}
-            fontSize={["5px", "10px", "16px"]}
+            fontSize={[".3125rem", ".625rem", "1rem"]}
             fontWeight={600}
-            lineHeight={"24px"}
-            letterSpacing={"-0.32px"}
+            lineHeight={"1.5rem"}
+            letterSpacing={"-0.02rem"}
           >
             See all cars
           </Text>
@@ -80,14 +80,14 @@ export default function HomeSection() {
       </VStack>
       {/* <Stack w={"full"} alignItems={"flex-end"}>
         <Img
-          w={["150px", "300px", "700px"]}
-          h={["150px", "300px", "700px"]}
+          w={["9.375rem", "18.75rem", "43.75rem"]}
+          h={["9.375rem", "18.75rem", "43.75rem"]}
           bgColor={"transparent"}
           src={`/images/class_g/Class_G_Orange_outside_front.jpg`}
           backgroundSize="cover"
           backgroundPosition="center"
           backgroundRepeat="no-repeat"
-          borderRadius="63px 0px 0px 0px"
+          borderRadius="3.9375rem 0rem 0rem 0rem"
         />
       </Stack> */}
     </HStack>

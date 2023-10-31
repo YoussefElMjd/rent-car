@@ -9,12 +9,14 @@ export default function SectionSplit(props: ISectionSplitProps) {
     <HStack w={"100%"}>
       <Box
         opacity={props.opacity}
-        margin="80px 60px 60px 60px"
+        margin="5rem 3.75rem 3.75rem 3.75rem"
         bgColor={props.color ?? COLORS.Secondary.value}
-        height={props.h ?? "5px"}
+        height={props.h ?? ".3125rem"}
         w={"100%"}
-        borderRadius={"5px"}
-        boxShadow={"0px 0px 100px 0px " + props.color ?? COLORS.Secondary.value}
+        borderRadius={".3125rem"}
+        boxShadow={
+          "0rem 0rem 6.25rem 0rem " + props.color ?? COLORS.Secondary.value
+        }
       />
     </HStack>
   );

@@ -16,14 +16,14 @@ export const Login = Template.bind({});
 
 Login.args = {
   children: (
-    <Text color={COLORS.Third.value} fontSize={"14px"}>
+    <Text color={COLORS.Third.value} fontSize={".875rem"}>
       Login
     </Text>
   ),
   bgColor: COLORS.Secondary.value,
-  w: "82px",
-  h: "38px",
-  borderRadius: "5px",
+  w: "5.125rem",
+  h: "2.375rem",
+  borderRadius: ".3125rem",
   _hover: {
     filter: "saturate(200%)",
   },

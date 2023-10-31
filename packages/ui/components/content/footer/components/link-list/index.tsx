@@ -7,13 +7,13 @@ import Link from "../../../../navigation/link";
 
 export default function LinkList(props: ILinkListProps) {
   return (
-    <VStack alignItems={"left"} spacing={"20px"} w={"152px"}>
+    <VStack alignItems={"left"} spacing={"1.25rem"} w={"9.5rem"}>
       <Text
         color={COLORS.Secondary.value}
-        fontSize={"20px"}
+        fontSize={"1.25rem"}
         fontWeight={"600"}
-        lineHeight={"50px"}
-        letterSpacing={"-0.4px"}
+        lineHeight={"3.125rem"}
+        letterSpacing={"-0.025rem"}
       >
         {props.title}
       </Text>
@@ -22,10 +22,10 @@ export default function LinkList(props: ILinkListProps) {
         <Link href={e.href} isExternal>
           <Text
             color={COLORS.Secondary.value}
-            fontSize={"16px"}
+            fontSize={"1rem"}
             fontWeight={"500"}
-            lineHeight={"24px"}
-            letterSpacing={"-0.32px"}
+            lineHeight={"1.5rem"}
+            letterSpacing={"-0.02rem"}
           >
             {e.title}
           </Text>

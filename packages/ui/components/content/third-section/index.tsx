@@ -119,7 +119,11 @@ export default function ThirdSection() {
     />,
   ];
   return (
-    <VStack justifyContent={"center"} alignItems={"center"} spacing={"50px"}>
+    <VStack
+      justifyContent={"center"}
+      alignItems={"center"}
+      spacing={"3.125rem"}
+    >
       <TitleContent
         title="Most popular car rental deals"
         content="A high-performing web-based car rental system for any rent-a-car
@@ -129,7 +133,7 @@ export default function ThirdSection() {
         w="100%"
         overflow={"hidden"}
         flexWrap={"wrap"}
-        spacing={"20px"}
+        spacing={"1.25rem"}
         justifyContent={"center"}
         alignItems={"center"}
       >

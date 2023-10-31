@@ -10,7 +10,7 @@ export default function VideoBackground(props: IVideoProps) {
       mt="4"
       w={props.w ?? "100%"}
       h={props.h}
-      boxShadow={"0px 0px 50px -5px " + COLORS.Third.value}
+      boxShadow={"0rem 0rem 3.125rem -0.3125rem " + COLORS.Third.value}
       overflow={"hidden"}
       backgroundColor={"rgba(0,0,0,0.2)"}
     >
@@ -29,7 +29,7 @@ export default function VideoBackground(props: IVideoProps) {
             zIndex: -50,
             width: "100%",
             height: "100%",
-            top: "-160px",
+            top: "-10rem",
           }}
         />
       </AspectRatio>

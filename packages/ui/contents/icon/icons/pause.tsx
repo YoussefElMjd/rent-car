@@ -1,4 +1,5 @@
 import React from "react";
+import COLORS from "../../../constant/colors";
 export const Pause = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
     {...props}
@@ -14,9 +15,9 @@ export const Pause = (props: React.SVGProps<SVGSVGElement>) => (
       width="8"
       height="28"
       rx="1"
-      stroke="#D8781F"
-      stroke-width="2"
-      stroke-linecap="round"
+      stroke={COLORS.Secondary.value}
+      strokeWidth="2"
+      strokeLinecap="round"
     />
     <rect
       x="28"
@@ -24,9 +25,9 @@ export const Pause = (props: React.SVGProps<SVGSVGElement>) => (
       width="8"
       height="28"
       rx="1"
-      stroke="#D8781F"
-      stroke-width="2"
-      stroke-linecap="round"
+      stroke={COLORS.Secondary.value}
+      strokeWidth="2"
+      strokeLinecap="round"
     />
   </svg>
 );

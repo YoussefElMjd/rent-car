@@ -1,4 +1,5 @@
 import React from "react";
+import COLORS from "../../../constant/colors";
 export const Facebook = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
     {...props}
@@ -9,7 +10,12 @@ export const Facebook = (props: React.SVGProps<SVGSVGElement>) => (
     xmlns="http://www.w3.org/2000/svg"
   >
     <g filter="url(#filter0_d_107_406)">
-      <circle cx="34.8001" cy="21.9796" r="16.7999" fill="#D8781F" />
+      <circle
+        cx="34.8001"
+        cy="21.9796"
+        r="16.7999"
+        fill={COLORS.Secondary.value}
+      />
     </g>
     <path
       d="M34.8 5.17969C25.5215 5.17969 18 12.7012 18 21.9797C18 31.2582 25.5215 38.7797 34.8 38.7797C44.0785 38.7797 51.6 31.2582 51.6 21.9797C51.6 12.7012 44.0785 5.17969 34.8 5.17969ZM38.7795 16.7892H36.2543C35.955 16.7892 35.6225 17.1829 35.6225 17.7062V19.5297H38.7813L38.3035 22.1302H35.6225V29.9369H32.6423V22.1302H29.9385V19.5297H32.6423V18.0002C32.6423 15.8057 34.1648 14.0224 36.2543 14.0224H38.7795V16.7892Z"
@@ -23,9 +29,9 @@ export const Facebook = (props: React.SVGProps<SVGSVGElement>) => (
         width="69.5999"
         height="69.5999"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"

@@ -10,16 +10,16 @@ export default function StepCard(props: IStepCardProps) {
   return (
     <VStack
       w="auto"
-      spacing={"30px"}
+      spacing={"1.875rem"}
       justifyContent={"center"}
       alignItems={"center"}
     >
       <Reveal>
         <Stack
           bgColor={COLORS.Fourth.value}
-          borderRadius={"30px"}
-          w="106px"
-          h="106px"
+          borderRadius={"1.875rem"}
+          w="6.625rem"
+          h="6.625rem"
           justifyContent={"center"}
           alignItems={"center"}
           alignContent={"center"}
@@ -27,14 +27,18 @@ export default function StepCard(props: IStepCardProps) {
           <Icon name={props.name} stroke={COLORS.Third.value} />
         </Stack>
       </Reveal>
-      <VStack spacing={"18px"} justifyContent={"center"} alignItems={"center"}>
+      <VStack
+        spacing={"1.125rem"}
+        justifyContent={"center"}
+        alignItems={"center"}
+      >
         <Reveal>
           <Text
             textAlign={"center"}
             color={COLORS.Secondary.value}
-            fontSize={"24px"}
+            fontSize={"1.5rem"}
             fontWeight={600}
-            letterSpacing={"-0.48px"}
+            letterSpacing={"-0.03rem"}
             lineHeight={"150%"}
           >
             {props.title}
@@ -44,9 +48,9 @@ export default function StepCard(props: IStepCardProps) {
           <Text
             textAlign={"center"}
             color={COLORS.Third.value}
-            fontSize={"14px"}
+            fontSize={".875rem"}
             fontWeight={400}
-            letterSpacing={"-0.28px"}
+            letterSpacing={"-0.0175rem"}
             lineHeight={"175%"}
           >
             {props.content}

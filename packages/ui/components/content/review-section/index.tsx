@@ -45,7 +45,7 @@ export default function ReviewSection() {
   };
 
   return (
-    <VStack w="full" spacing="50px">
+    <VStack w="full" spacing="3.125rem">
       <TitleContent
         title="Trusted by Thousands of 
 Happy Customer"
@@ -54,7 +54,7 @@ Happy Customer"
       />
       <HStack
         ref={containerRef}
-        spacing={"50px"}
+        spacing={"3.125rem"}
         overflowX={"scroll"}
         w="80%"
         overscrollBehavior={"contain"}
@@ -62,14 +62,14 @@ Happy Customer"
         sx={{
           "&::-webkit-scrollbar": {
             bgColor: "rgba(0,0,0,0.5)",
-            width: "10px",
-            height: "10px",
+            width: ".625rem",
+            height: ".625rem",
           },
           "&::-webkit-scrollbar-thumb": {
             bgColor: COLORS.Secondary.value,
-            borderRadius: "10px",
-            width: "8px",
-            height: "6px",
+            borderRadius: ".625rem",
+            width: ".5rem",
+            height: ".375rem",
           },
         }}
       >
@@ -146,30 +146,30 @@ Happy Customer"
       </HStack>
       <HStack w="80%">
         <Box
-          width={"45px"}
-          height="15px"
+          width={"2.8125rem"}
+          height=".9375rem"
           bgColor={COLORS.Secondary.value}
-          borderRadius={"10px"}
+          borderRadius={".625rem"}
         />
         <Box
-          width={"15px"}
-          height="15px"
+          width={".9375rem"}
+          height=".9375rem"
           bgColor={
             scrollPourcentage > 25 ? COLORS.Secondary.value : COLORS.Third.value
           }
           borderRadius={"100%"}
         />
         <Box
-          width={"15px"}
-          height="15px"
+          width={".9375rem"}
+          height=".9375rem"
           bgColor={
             scrollPourcentage > 50 ? COLORS.Secondary.value : COLORS.Third.value
           }
           borderRadius={"100%"}
         />
         <Box
-          width={"15px"}
-          height="15px"
+          width={".9375rem"}
+          height=".9375rem"
           bgColor={
             scrollPourcentage > 75 ? COLORS.Secondary.value : COLORS.Third.value
           }

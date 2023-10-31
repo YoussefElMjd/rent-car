@@ -8,13 +8,13 @@ import TitleContent from "../Title-content";
 
 export default function SecondSection() {
   return (
-    <VStack spacing={"48px"}>
+    <VStack spacing={"3rem"}>
       <TitleContent
         title="How it work"
         content="A high-performing web-based car rental system for any rent-a-car
           company and website"
       />
-      <HStack w="100%" spacing="0px" justifyContent={"center"}>
+      <HStack w="100%" spacing="0rem" justifyContent={"center"}>
         <StepCard
           name="localisationBig"
           title="Choose Location"

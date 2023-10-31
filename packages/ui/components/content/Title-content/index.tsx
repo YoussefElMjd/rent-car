@@ -6,12 +6,12 @@ import COLORS from "../../../constant/colors";
 
 export default function TitleContent(props: ITitleContentProps) {
   return (
-    <VStack justifyContent={"center"} spacing={"18px"} w={"50%"}>
+    <VStack justifyContent={"center"} spacing={"1.125rem"} w={"50%"}>
       <Text
         color={COLORS.Secondary.value}
-        fontSize={"48px"}
+        fontSize={"3rem"}
         lineHeight={"150%"}
-        letterSpacing={"-0.96px"}
+        letterSpacing={"-0.06rem"}
         textAlign={"center"}
       >
         {props.title}
@@ -20,9 +20,9 @@ export default function TitleContent(props: ITitleContentProps) {
         <Text
           textAlign={"center"}
           color={COLORS.Third.value}
-          fontSize={"18px"}
+          fontSize={"1.125rem"}
           lineHeight={"150%"}
-          letterSpacing={"-0.96px"}
+          letterSpacing={"-0.06rem"}
           fontWeight={400}
         >
           {props.content}

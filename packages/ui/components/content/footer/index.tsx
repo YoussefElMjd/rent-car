@@ -13,24 +13,24 @@ export default function Footer() {
       <HStack
         w="full"
         h="full"
-        padding="80px 60px 60px 60px"
+        padding="5rem 3.75rem 3.75rem 3.75rem"
         justifyContent={"center"}
         alignItems={"center"}
       >
-        <VStack alignItems={"left"} w="full" spacing={"20px"}>
+        <VStack alignItems={"left"} w="full" spacing={"1.25rem"}>
           <Text
-            fontSize={"32px"}
+            fontSize={"2rem"}
             color={COLORS.Secondary.value}
             fontWeight={"600"}
-            lineHeight={"48px"}
+            lineHeight={"3rem"}
           >
             RentCarEmirates
           </Text>
           <Text
-            fontSize={"16px"}
+            fontSize={"1rem"}
             color={COLORS.Secondary.value}
             fontWeight={"500"}
-            lineHeight={"24px"}
+            lineHeight={"1.5rem"}
           >
             Our vision is to provide convenience and help increase your sales
             business.
@@ -38,26 +38,26 @@ export default function Footer() {
           <HStack
             w="full"
             justifyContent={"left"}
-            marginInlineStart={"-20px"}
-            spacing={"20px"}
+            marginInlineStart={"-1.25rem"}
+            spacing={"1.25rem"}
           >
-            <Link href="" isExternal w={"33px"} h={"33px"}>
+            <Link href="" isExternal w={"2.0625rem"} h={"2.0625rem"}>
               <Icon name="facebook" />
             </Link>
-            <Link href="" isExternal w={"33px"} h={"33px"}>
+            <Link href="" isExternal w={"2.0625rem"} h={"2.0625rem"}>
               <Icon name="snapchat" />
             </Link>
             <Link
               href="https://www.instagram.com/rentacaremirats/"
               isExternal
-              w={"33px"}
-              h={"33px"}
+              w={"2.0625rem"}
+              h={"2.0625rem"}
             >
               <Icon name="instagram" />
             </Link>
           </HStack>
         </VStack>
-        <HStack w="full" justifyContent={"center"} spacing={"150px"}>
+        <HStack w="full" justifyContent={"center"} spacing={"9.375rem"}>
           <LinkList
             title="About"
             content={[
@@ -90,14 +90,14 @@ export default function Footer() {
           />
         </HStack>
       </HStack>
-      <SectionSplit color={COLORS.Fourth.value} h="1.5px" opacity="0.1" />
-      <HStack w="full" padding="0px 60px 60px 60px">
+      <SectionSplit color={COLORS.Fourth.value} h=".0938rem" opacity="0.1" />
+      <HStack w="full" padding="0rem 3.75rem 3.75rem 3.75rem">
         <Text
           color={COLORS.Secondary.value}
-          fontSize={"16px"}
+          fontSize={"1rem"}
           fontWeight={"600"}
-          lineHeight={"24px"}
-          letterSpacing={"-0.32px"}
+          lineHeight={"1.5rem"}
+          letterSpacing={"-0.02rem"}
         >
           ©2023 RentCarEmirats. All rights reserved
         </Text>

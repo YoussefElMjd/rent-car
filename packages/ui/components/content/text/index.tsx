@@ -12,7 +12,7 @@ export default function Text(props: ITextProps) {
       fontFamily={"Plus Jakarta Sans"}
       fontSize={props.fontSize}
       fontStyle={"normal"}
-      lineHeight={props.lineHeight ?? "54px"}
+      lineHeight={props.lineHeight ?? "3.375rem"}
       fontWeight={props.fontWeight ?? "500"}
       color={props.color ?? COLORS.Third.value}
     >

@@ -8,48 +8,48 @@ export default function Review(props: IReviewProps) {
   return (
     <VStack
       {...props}
-      w="400px"
-      h="230px"
-      minW="400px"
-      minH="230px"
-      borderRadius="10px"
+      w="25rem"
+      h="14.375rem"
+      minW="25rem"
+      minH="14.375rem"
+      borderRadius=".625rem"
       bgColor={COLORS.Third.value}
-      padding="33px 36px"
-      spacing={"20px"}
+      padding="2.0625rem 2.25rem"
+      spacing={"1.25rem"}
     >
       <HStack w="full" alignItems={"left"}>
         <VStack spacing={0} w="full" alignItems={"left"}>
           <Text
             color={COLORS.Secondary.value}
-            fontSize={"18px"}
+            fontSize={"1.125rem"}
             fontWeight={"500"}
-            lineHeight={"30px"}
+            lineHeight={"1.875rem"}
           >
             {props.name}
           </Text>
           <Text
             color={COLORS.Fourth.value}
-            fontSize={"14px"}
+            fontSize={".875rem"}
             fontWeight={"400"}
-            lineHeight={"10px"}
+            lineHeight={".625rem"}
           >
             {props.location}
           </Text>
         </VStack>
         <Text
           color={COLORS.Secondary.value}
-          fontSize={"16px"}
+          fontSize={"1rem"}
           fontWeight={"400"}
-          lineHeight={"30px"}
+          lineHeight={"1.875rem"}
         >
           {props.note}
         </Text>
       </HStack>
       <Text
         color={COLORS.Secondary.value}
-        fontSize={"16px"}
+        fontSize={"1rem"}
         fontWeight={"400"}
-        lineHeight={"30px"}
+        lineHeight={"1.875rem"}
       >
         “{props.review}”.
       </Text>
