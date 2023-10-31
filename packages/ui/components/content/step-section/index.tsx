@@ -2,7 +2,7 @@ import { HStack, Stack, VStack } from "@chakra-ui/react";
 import React from "react";
 import StepCard from "../step-card";
 import Icon from "../../../contents/icon";
-import TitleContent from "../Title-content";
+import TitleContent from "../title-content";
 import IStepProps from "./props";
 
 export default function StepSection(props: IStepProps) {

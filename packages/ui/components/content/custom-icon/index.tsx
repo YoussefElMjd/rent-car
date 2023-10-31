@@ -1,4 +1,4 @@
-import { Box, IconButtonProps } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import Icon from "../../../contents/icon";
 import React from "react";
 import ICustomIconProps from "./props";

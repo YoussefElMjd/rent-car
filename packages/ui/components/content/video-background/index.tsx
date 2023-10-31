@@ -1,5 +1,5 @@
 import { AspectRatio, Stack } from "@chakra-ui/react";
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import IVideoProps from "./props";
 import COLORS from "../../../constant/colors";
 
@@ -19,7 +19,7 @@ export default function VideoBackground(props: IVideoProps) {
           className="youtube-video"
           src={
             props.src +
-            "?&vq=hd1080&vw=hd1080&start=3&mute=1&autoplay=1&controls=0&loop=1&rel=0&modestbranding=0&showinfo=0&playlist=" +
+            "?&vq=hd1080&start=3&mute=1&autoplay=1&controls=0&loop=1&rel=0&modestbranding=0&showinfo=0&playlist=" +
             props.idvideo
           }
           tabIndex={-1}

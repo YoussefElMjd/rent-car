@@ -1,12 +1,10 @@
 import {
-  Box,
   HStack,
   Img,
   Modal,
   ModalBody,
   ModalCloseButton,
   ModalContent,
-  ModalHeader,
   ModalOverlay,
   Stack,
   VStack,

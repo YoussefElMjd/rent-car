@@ -1,6 +1,6 @@
 import { Box, HStack, VStack } from "@chakra-ui/react";
 import React, { useRef, useState } from "react";
-import TitleContent from "../Title-content";
+import TitleContent from "../title-content";
 import Review from "../review";
 import Button from "../../inputs/button";
 import COLORS from "../../../constant/colors";

@@ -1,11 +1,7 @@
-import { Box, HStack, Stack, VStack } from "@chakra-ui/react";
+import { HStack, VStack } from "@chakra-ui/react";
 import React from "react";
-import Text from "../text";
-import COLORS from "../../../constant/colors";
-import StepCard from "../step-card";
-import Icon from "../../../contents/icon";
 import CarCard from "../car-card";
-import TitleContent from "../Title-content";
+import TitleContent from "../title-content";
 import ICatalogueProps from "./props";
 
 export default function CatalogueSection(props: ICatalogueProps) {

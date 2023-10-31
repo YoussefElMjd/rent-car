@@ -1,10 +1,8 @@
-import { AspectRatio, HStack, Img, VStack } from "@chakra-ui/react";
+import { AspectRatio, HStack, VStack } from "@chakra-ui/react";
 import React from "react";
-import Text from "../text";
-import COLORS from "../../../constant/colors";
 import IconText from "../icon-text";
 import Reveal from "../reveal";
-import TitleContent from "../Title-content";
+import TitleContent from "../title-content";
 import IContactProps from "./props";
 
 export default function ContactSection(props: IContactProps) {

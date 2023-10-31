@@ -1,8 +1,8 @@
 import { Stack, VStack } from "@chakra-ui/react";
-import ITitleContentProps from "./props";
 import React from "react";
 import Text from "../text";
 import COLORS from "../../../constant/colors";
+import ITitleContentProps from "./props";
 
 export default function TitleContent(props: ITitleContentProps) {
   return (
