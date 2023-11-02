@@ -8,7 +8,11 @@ import Reveal from "../reveal";
 
 export default function IconText(props: IIConTextProps) {
   return (
-    <HStack spacing={"1.75rem"} w={"31.25rem"} alignItems={"left"}>
+    <HStack
+      spacing={"1.75rem"}
+      w={{ base: "366px", lg: "35.375rem", xl: "35.375rem" }}
+      alignItems={"left"}
+    >
       <Stack
         bgColor={COLORS.Secondary.value}
         borderRadius={".625rem"}

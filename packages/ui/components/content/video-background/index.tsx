@@ -1,4 +1,4 @@
-import { AspectRatio, Stack } from "@chakra-ui/react";
+import { AspectRatio, Box, Stack } from "@chakra-ui/react";
 import React from "react";
 import IVideoProps from "./props";
 import COLORS from "../../../constant/colors";
@@ -14,7 +14,10 @@ export default function VideoBackground(props: IVideoProps) {
       overflow={"hidden"}
       backgroundColor={"rgba(0,0,0,0.2)"}
     >
-      <AspectRatio ratio={16 / 9}>
+      <AspectRatio
+        ratio={{ base: 16 / 9, lg: 16 / 9, xl: 16 / 9 }}
+        top={{ base: "10rem" }}
+      >
         <iframe
           className="youtube-video"
           src={

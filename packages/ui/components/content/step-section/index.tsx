@@ -7,7 +7,7 @@ import IStepProps from "./props";
 
 export default function StepSection(props: IStepProps) {
   return (
-    <VStack ref={props.ref} spacing={"3rem"}>
+    <VStack ref={props.ref} spacing={"3rem"} w="full">
       <TitleContent
         title="How it work"
         content="A high-performing web-based car rental system for any rent-a-car
@@ -19,7 +19,7 @@ export default function StepSection(props: IStepProps) {
           title="Choose Location"
           content="Aliquam erat volutpat. Integer malesuada turpis id fringilla suscipit. Maecenas ultrices, orci vitae convallis mattis."
         />
-        <Stack>
+        <Stack display={{ base: "none", lg: "flex", xl: "flex" }}>
           <Icon name="stepLine" />
         </Stack>
         <StepCard
@@ -27,7 +27,7 @@ export default function StepSection(props: IStepProps) {
           title="Pick-up Date"
           content="Aliquam erat volutpat. Integer malesuada turpis id fringilla suscipit. Maecenas ultrices, orci vitae convallis mattis."
         />
-        <Stack w="fit-content">
+        <Stack display={{ base: "none", lg: "flex", xl: "flex" }}>
           <Icon name="stepLine" />
         </Stack>
         <StepCard

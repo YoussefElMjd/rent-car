@@ -1,4 +1,4 @@
-import { HStack, VStack } from "@chakra-ui/react";
+import { HStack, Stack, VStack } from "@chakra-ui/react";
 import React from "react";
 import COLORS from "../../../constant/colors";
 import Text from "../text";
@@ -10,34 +10,54 @@ import SectionSplit from "../section-split";
 export default function Footer() {
   return (
     <VStack w="full" h="full" bgColor={COLORS.Third.value}>
-      <HStack
+      <Stack
+        direction={{ base: "column", lg: "row", xl: "row" }}
         w="full"
         h="full"
-        padding="5rem 3.75rem 3.75rem 3.75rem"
-        justifyContent={"center"}
-        alignItems={"center"}
+        padding={{
+          base: "20px 15px 15px 15px",
+          lg: "40px 30px 30px 30px",
+          xl: "5rem 3.75rem 3.75rem 3.75rem",
+        }}
+        justifyContent={{ base: "center" }}
+        alignItems={{ base: "center" }}
       >
-        <VStack alignItems={"left"} w="full" spacing={"1.25rem"}>
+        <VStack
+          alignItems={{
+            base: "center",
+          }}
+          w="full"
+          spacing={{ base: "10px", lg: "1.25rem", xl: "1.25rem" }}
+        >
           <Text
-            fontSize={"2rem"}
+            fontSize={{
+              base: "28px",
+              lg: "28px",
+              xl: "32px",
+            }}
             color={COLORS.Secondary.value}
             fontWeight={"600"}
-            lineHeight={"3rem"}
+            lineHeight={{ base: "30px", lg: "48px", xl: "48px" }}
           >
             RentCarEmirates
           </Text>
           <Text
-            fontSize={"1rem"}
+            fontSize={{
+              base: "14px",
+              lg: "14px",
+              xl: "1rem",
+            }}
             color={COLORS.Secondary.value}
             fontWeight={"500"}
             lineHeight={"1.5rem"}
+            textAlign={"center"}
           >
             Our vision is to provide convenience and help increase your sales
             business.
           </Text>
           <HStack
             w="full"
-            justifyContent={"left"}
+            justifyContent={"center"}
             marginInlineStart={"-1.25rem"}
             spacing={"1.25rem"}
           >
@@ -57,7 +77,17 @@ export default function Footer() {
             </Link>
           </HStack>
         </VStack>
-        <HStack w="full" justifyContent={"center"} spacing={"9.375rem"}>
+        <HStack
+          w={{ lg: "full", xl: "full" }}
+          justifyContent={"center"}
+          spacing={{
+            base: "0px",
+            lg: "50px",
+            xl: "150px",
+          }}
+          paddingTop={{ base: "50px" }}
+          marginBottom={{ base: "-50px" }}
+        >
           <LinkList
             title="About"
             content={[
@@ -89,9 +119,19 @@ export default function Footer() {
             ]}
           />
         </HStack>
-      </HStack>
+      </Stack>
       <SectionSplit color={COLORS.Fourth.value} h=".0938rem" opacity="0.1" />
-      <HStack w="full" padding="0rem 3.75rem 3.75rem 3.75rem">
+      <HStack
+        w="full"
+        padding={{
+          base: "0px 0px 15px 0px",
+          lg: "40px 30px 30px 30px",
+          xl: "5rem 3.75rem 3.75rem 3.75rem",
+        }}
+        marginTop={{ base: "-20px" }}
+        alignItems={{ base: "center" }}
+        justifyContent={{ base: "center" }}
+      >
         <Text
           color={COLORS.Secondary.value}
           fontSize={"1rem"}

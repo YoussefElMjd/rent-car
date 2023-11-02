@@ -56,7 +56,7 @@ Happy Customer"
         ref={containerRef}
         spacing={"3.125rem"}
         overflowX={"scroll"}
-        w="80%"
+        w={{ base: "90%", lg: "80%", xl: "80%" }}
         onScroll={handleOnScroll}
         sx={{
           "&::-webkit-scrollbar": {
@@ -73,6 +73,7 @@ Happy Customer"
         }}
       >
         <Button
+          display={{ base: "none", lg: "flex", xl: "flex" }}
           position={"absolute"}
           left={20}
           paddingInlineStart={"0"}
@@ -132,6 +133,7 @@ Happy Customer"
           review="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tincidunt vestibulum arcu, ultrices malesuada enim semper sit amet. "
         />
         <Button
+          display={{ base: "none", lg: "flex", xl: "flex" }}
           position={"absolute"}
           right={20}
           bgColor={"transparent"}

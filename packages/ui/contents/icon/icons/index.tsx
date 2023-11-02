@@ -4,6 +4,7 @@ import { Car } from "./car";
 import { Facebook } from "./facebook";
 import { Instagram } from "./instagram";
 import { Localisation, LocalisationBig } from "./localisation";
+import { Menu } from "./menu";
 import { NextArrow } from "./next-arrow";
 import { Pause } from "./pause";
 import { Phone } from "./phone";
@@ -28,6 +29,7 @@ const Icons = {
   nextArrow: NextArrow,
   play: Play,
   pause: Pause,
+  menu: Menu,
 };
 
 export default Icons;

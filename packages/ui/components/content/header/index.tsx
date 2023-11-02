@@ -5,19 +5,38 @@ import COLORS from "../../../constant/colors";
 import Link from "../../navigation/link";
 import Button from "../../inputs/button";
 import IHeaderProps from "./props";
+import BurgerMenu from "./components/burger-menu";
 
 export default function Header(props: IHeaderProps) {
   return (
     <HStack
       alignItems={"center"}
       w={"100%"}
-      spacing="7.3125rem"
-      padding="1.75rem 9.375rem 1.75rem 9.375rem"
+      spacing={{ base: "10px", lg: "50px", xl: "117px" }}
+      padding={{
+        base: "5px 10px 5px 10px",
+        lg: "15px 50px 15px 50px",
+        xl: "1.75rem 9.375rem 1.75rem 9.375rem",
+      }}
     >
-      <Text color={COLORS.Secondary.value} fontSize="2.25rem" fontWeight="700">
+      <Text
+        color={COLORS.Secondary.value}
+        fontSize={{ base: "30px", lg: "2.25rem", xl: "2.25rem" }}
+        fontWeight="700"
+      >
         RentCarEmirates
       </Text>
-      <HStack spacing={"2.4375rem"} justifyContent={"right"} w="100%">
+      <HStack
+        display={{ base: "none", md: "none", lg: "flex" }}
+        spacing={{
+          base: "10px",
+          md: "15px",
+          lg: "30px",
+          xl: "2.4375rem",
+        }}
+        justifyContent={"right"}
+        w="100%"
+      >
         <Link
           onClick={() => props.onLinkClick("home")}
           color={COLORS.Third.value}
@@ -98,6 +117,14 @@ export default function Header(props: IHeaderProps) {
             </Text>
           </Button>
         </HStack>
+      </HStack>
+      <HStack
+        display={{ base: "flex", md: "flex", lg: "none" }}
+        w="full"
+        alignItems={"flex-end"}
+        justifyContent={"flex-end"}
+      >
+        <BurgerMenu onLinkClick={props.onLinkClick} />
       </HStack>
     </HStack>
   );

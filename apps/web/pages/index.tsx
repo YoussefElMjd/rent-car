@@ -65,7 +65,7 @@ export default function Home() {
     }
   };
   return (
-    <VStack>
+    <VStack overflowX="hidden">
       <AudioPlayer />
       <Header onLinkClick={scrollToSection} />
       <HomeSection ref={homeSectionRef} />

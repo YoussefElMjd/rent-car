@@ -6,17 +6,21 @@ import ITitleContentProps from "./props";
 
 export default function TitleContent(props: ITitleContentProps) {
   return (
-    <VStack justifyContent={"center"} spacing={"1.125rem"} w={"50%"}>
+    <VStack
+      justifyContent={"center"}
+      spacing={"1.125rem"}
+      w={{ base: "90%", lg: "50%", xl: "50%" }}
+    >
       <Text
         color={COLORS.Secondary.value}
-        fontSize={"3rem"}
+        fontSize={{ base: "38px", lg: "3rem", xl: "3rem" }}
         lineHeight={"150%"}
         letterSpacing={"-0.06rem"}
         textAlign={"center"}
       >
         {props.title}
       </Text>
-      <Stack w="50%">
+      <Stack w={{ base: "100%", lg: "50%", xl: "50%" }}>
         <Text
           textAlign={"center"}
           color={COLORS.Third.value}

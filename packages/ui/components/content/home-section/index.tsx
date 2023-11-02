@@ -11,7 +11,7 @@ const HomeSection = forwardRef((props: IHomeProps, ref) => {
     <HStack
       ref={ref}
       w={"100%"}
-      h={"37.5rem"}
+      h={{ base: "200px", lg: "600px", xl: "600px" }}
       spacing={"6.25rem"}
       justifyContent={"center"}
       alignItems={"center"}
@@ -21,10 +21,10 @@ const HomeSection = forwardRef((props: IHomeProps, ref) => {
         position={"absolute"}
         src="https://www.youtube.com/embed/yAo7eSoq2_8"
         idvideo="yAo7eSoq2_8"
-        h="37.5rem"
+        h={{ base: "200px", lg: "600px", xl: "600px" }}
       />
       <VStack
-        spacing="2.4375rem"
+        spacing={{ base: "5px", lg: "2.4375rem", xl: "2.4375rem" }}
         alignItems={"left"}
         justifyContent={"left"}
         w="50%"
@@ -32,27 +32,31 @@ const HomeSection = forwardRef((props: IHomeProps, ref) => {
       >
         <Text
           color={COLORS.Third.value}
-          fontSize={[".5rem", ".875rem", "1.5rem"]}
+          fontSize={{ base: "8px", lg: ".875rem", xl: "1.5rem" }}
           fontWeight={"500"}
-          lineHeight={"1.0625rem"}
+          lineHeight={"17px"}
         >
           100% Trusted Car rentel platform in Dubaï
         </Text>
-        <VStack spacing={"1.5rem"} w="fit-content" alignItems={"left"}>
+        <VStack
+          spacing={{ base: "10px", lg: "24px", xl: "24px" }}
+          w="fit-content"
+          alignItems={"left"}
+        >
           <Text
             color={COLORS.Secondary.value}
-            fontSize={[".75rem", "2.0625rem", "3.5rem"]}
+            fontSize={{ base: "16px", lg: "2.0625rem", xl: "3.5rem" }}
             fontWeight={"900"}
-            lineHeight={"121.2%"}
+            lineHeight={{ base: "18px", lg: "121.2%", xl: "121.2%" }}
             textTransform={"uppercase"}
           >
             Fast And Easy Way To Rent A Car
           </Text>
           <Text
             color={COLORS.Third.value}
-            fontSize={[".3125rem", ".625rem", "1.5rem"]}
+            fontSize={{ base: "7px", lg: ".625rem", xl: "1.5rem" }}
             fontWeight={"500"}
-            lineHeight={"1.625rem"}
+            lineHeight={{ base: "10px", lg: "26px", xl: "26px" }}
             letterSpacing={"-0.02rem"}
             opacity="0.80"
           >
@@ -71,7 +75,7 @@ const HomeSection = forwardRef((props: IHomeProps, ref) => {
         >
           <Text
             color={COLORS.Secondary.value}
-            fontSize={[".3125rem", ".625rem", "1rem"]}
+            fontSize={{ base: "8px", lg: ".625rem", xl: "1rem" }}
             fontWeight={600}
             lineHeight={"1.5rem"}
             letterSpacing={"-0.02rem"}

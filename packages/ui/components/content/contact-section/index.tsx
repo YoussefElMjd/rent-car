@@ -1,4 +1,4 @@
-import { AspectRatio, HStack, VStack } from "@chakra-ui/react";
+import { AspectRatio, HStack, Stack, VStack } from "@chakra-ui/react";
 import React from "react";
 import IconText from "../icon-text";
 import Reveal from "../reveal";
@@ -14,16 +14,17 @@ export default function ContactSection(props: IContactProps) {
           company and website"
       />
 
-      <HStack
-        alignItems="left"
+      <Stack
+        alignItems={{ base: "center", lg: "left", xl: "left" }}
         justifyContent={"center"}
-        spacing="12.5rem"
+        spacing={{ base: "0px", lg: "12.5rem", xl: "12.5rem" }}
         w="full"
+        direction={{ base: "column", lg: "row", xl: "row" }}
       >
         <AspectRatio
           ratio={16 / 9}
-          w={"35.375rem"}
-          h="32.875rem"
+          w={{ base: "366px", lg: "35.375rem", xl: "35.375rem" }}
+          h={{ base: "366px", lg: "35.375rem", xl: "35.375rem" }}
           justifyContent={"center"}
         >
           <iframe
@@ -60,7 +61,7 @@ export default function ContactSection(props: IContactProps) {
             />
           </Reveal>
         </VStack>
-      </HStack>
+      </Stack>
     </VStack>
   );
 }

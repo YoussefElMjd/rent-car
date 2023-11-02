@@ -8,13 +8,17 @@ export default function Review(props: IReviewProps) {
   return (
     <VStack
       {...props}
-      w="25rem"
+      w={{ base: "300px", lg: "25rem", xl: "25rem" }}
       h="14.375rem"
-      minW="25rem"
+      minW={{ base: "300px", lg: "25rem", xl: "25rem" }}
       minH="14.375rem"
       borderRadius=".625rem"
       bgColor={COLORS.Third.value}
-      padding="2.0625rem 2.25rem"
+      padding={{
+        base: "1.25rem 1.5rem",
+        lg: "2.0625rem 2.25rem",
+        xl: "2.0625rem 2.25rem",
+      }}
       spacing={"1.25rem"}
     >
       <HStack w="full" alignItems={"left"}>

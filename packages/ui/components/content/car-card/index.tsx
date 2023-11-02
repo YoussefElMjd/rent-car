@@ -1,4 +1,5 @@
 import {
+  Box,
   HStack,
   Img,
   Modal,
@@ -116,8 +117,8 @@ export default function CarCard(props: ICarCardProps) {
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay backdropFilter="auto" backdropBlur=".125rem" />
         <ModalContent
-          minW="50rem"
-          h="50rem"
+          minW={{ base: "full", lg: "50rem", xl: "50rem" }}
+          h={"50rem"}
           justifyContent="center"
           alignItems="center"
           borderRadius={".9375rem"}
@@ -137,9 +138,15 @@ export default function CarCard(props: ICarCardProps) {
               _hover={{ filter: "saturate(200%)" }}
             />
             <ModalBody>
-              <HStack position={"relative"} justifyContent={"center"}>
+              <Stack
+                position={"relative"}
+                justifyContent={"center"}
+                alignItems={"center"}
+                direction={{ base: "column", lg: "row", xl: "row" }}
+              >
                 <Button
-                  paddingInlineStart={"0"}
+                  display={{ base: "none", lg: "flex", xl: "flex" }}
+                  paddingInlineStart={"10px"}
                   bgColor="transparent"
                   w="fit-content"
                   onClick={getPreviousPicture}
@@ -147,12 +154,33 @@ export default function CarCard(props: ICarCardProps) {
                 >
                   <Icon name="previousArrow" />
                 </Button>
-                <motion.img
-                  animate={controls}
-                  style={{ height: "43.75rem", borderRadius: "1.5625rem" }}
-                  src={props.pictures[index]}
-                />
+                <Box
+                  display={{ base: "none", lg: "flex", xl: "flex" }}
+                  w="full"
+                >
+                  <motion.img
+                    animate={controls}
+                    style={{ height: "700px", borderRadius: "1.5625rem" }}
+                    src={props.pictures[index]}
+                  />
+                </Box>
+                <Box
+                  display={{ base: "flex", lg: "none", xl: "none" }}
+                  w="full"
+                >
+                  <motion.img
+                    animate={controls}
+                    style={{
+                      height: "600px",
+                      minWidth: "300px",
+                      borderRadius: "1.5625rem",
+                    }}
+                    src={props.pictures[index]}
+                  />
+                </Box>
+
                 <Button
+                  display={{ base: "none", lg: "flex", xl: "flex" }}
                   paddingInlineEnd={"0"}
                   bgColor="transparent"
                   w="fit-content"
@@ -160,7 +188,33 @@ export default function CarCard(props: ICarCardProps) {
                 >
                   <Icon name="nextArrow" />
                 </Button>
-              </HStack>
+
+                <HStack
+                  display={{ base: "flex", lg: "none", xl: "none" }}
+                  justifyContent={"center"}
+                  alignItems={"center"}
+                  w="full"
+                  spacing={"100px"}
+                >
+                  <Button
+                    paddingInlineStart={"10px"}
+                    bgColor="transparent"
+                    w="fit-content"
+                    onClick={getPreviousPicture}
+                    zIndex={1}
+                  >
+                    <Icon name="previousArrow" />
+                  </Button>
+                  <Button
+                    paddingInlineEnd={"0"}
+                    bgColor="transparent"
+                    w="fit-content"
+                    onClick={getNextPicture}
+                  >
+                    <Icon name="nextArrow" />
+                  </Button>
+                </HStack>
+              </Stack>
             </ModalBody>
           </VStack>
         </ModalContent>
