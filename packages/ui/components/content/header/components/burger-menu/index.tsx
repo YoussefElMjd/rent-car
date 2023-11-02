@@ -40,7 +40,7 @@ export default function BurgerMenu(props: IBurgerMenuProps) {
             Menu
           </DrawerHeader>
           <DrawerCloseButton
-            mt={"10px"}
+            mt={".625rem"}
             bgColor={COLORS.Secondary.value}
             color={COLORS.Third.value}
           />

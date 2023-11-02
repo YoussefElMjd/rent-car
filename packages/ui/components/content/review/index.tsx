@@ -8,9 +8,9 @@ export default function Review(props: IReviewProps) {
   return (
     <VStack
       {...props}
-      w={{ base: "300px", lg: "25rem", xl: "25rem" }}
+      w={{ base: "18.75rem", lg: "25rem", xl: "25rem" }}
       h="14.375rem"
-      minW={{ base: "300px", lg: "25rem", xl: "25rem" }}
+      minW={{ base: "18.75rem", lg: "25rem", xl: "25rem" }}
       minH="14.375rem"
       borderRadius=".625rem"
       bgColor={COLORS.Third.value}

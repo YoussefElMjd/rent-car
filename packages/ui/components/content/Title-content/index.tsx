@@ -13,7 +13,7 @@ export default function TitleContent(props: ITitleContentProps) {
     >
       <Text
         color={COLORS.Secondary.value}
-        fontSize={{ base: "38px", lg: "3rem", xl: "3rem" }}
+        fontSize={{ base: "2.375rem", lg: "3rem", xl: "3rem" }}
         lineHeight={"150%"}
         letterSpacing={"-0.06rem"}
         textAlign={"center"}

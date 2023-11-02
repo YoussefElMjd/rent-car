@@ -17,14 +17,14 @@ export default function ContactSection(props: IContactProps) {
       <Stack
         alignItems={{ base: "center", lg: "left", xl: "left" }}
         justifyContent={"center"}
-        spacing={{ base: "0px", lg: "12.5rem", xl: "12.5rem" }}
+        spacing={{ base: "0rem", lg: "12.5rem", xl: "12.5rem" }}
         w="full"
         direction={{ base: "column", lg: "row", xl: "row" }}
       >
         <AspectRatio
           ratio={16 / 9}
-          w={{ base: "366px", lg: "35.375rem", xl: "35.375rem" }}
-          h={{ base: "366px", lg: "35.375rem", xl: "35.375rem" }}
+          w={{ base: "22.875rem", lg: "35.375rem", xl: "35.375rem" }}
+          h={{ base: "22.875rem", lg: "35.375rem", xl: "35.375rem" }}
           justifyContent={"center"}
         >
           <iframe

@@ -15,8 +15,8 @@ export default function Footer() {
         w="full"
         h="full"
         padding={{
-          base: "20px 15px 15px 15px",
-          lg: "40px 30px 30px 30px",
+          base: "1.25rem .9375rem .9375rem .9375rem",
+          lg: "2.5rem 1.875rem 1.875rem 1.875rem",
           xl: "5rem 3.75rem 3.75rem 3.75rem",
         }}
         justifyContent={{ base: "center" }}
@@ -27,24 +27,24 @@ export default function Footer() {
             base: "center",
           }}
           w="full"
-          spacing={{ base: "10px", lg: "1.25rem", xl: "1.25rem" }}
+          spacing={{ base: ".625rem", lg: "1.25rem", xl: "1.25rem" }}
         >
           <Text
             fontSize={{
-              base: "28px",
-              lg: "28px",
-              xl: "32px",
+              base: "1.75rem",
+              lg: "1.75rem",
+              xl: "2rem",
             }}
             color={COLORS.Secondary.value}
             fontWeight={"600"}
-            lineHeight={{ base: "30px", lg: "48px", xl: "48px" }}
+            lineHeight={{ base: "1.875rem", lg: "3rem", xl: "3rem" }}
           >
             RentCarEmirates
           </Text>
           <Text
             fontSize={{
-              base: "14px",
-              lg: "14px",
+              base: ".875rem",
+              lg: ".875rem",
               xl: "1rem",
             }}
             color={COLORS.Secondary.value}
@@ -81,12 +81,12 @@ export default function Footer() {
           w={{ lg: "full", xl: "full" }}
           justifyContent={"center"}
           spacing={{
-            base: "0px",
-            lg: "50px",
-            xl: "150px",
+            base: "0rem",
+            lg: "3.125rem",
+            xl: "9.375rem",
           }}
-          paddingTop={{ base: "50px" }}
-          marginBottom={{ base: "-50px" }}
+          paddingTop={{ base: "3.125rem" }}
+          marginBottom={{ base: "-3.125rem" }}
         >
           <LinkList
             title="About"
@@ -124,11 +124,11 @@ export default function Footer() {
       <HStack
         w="full"
         padding={{
-          base: "0px 0px 15px 0px",
-          lg: "40px 30px 30px 30px",
+          base: "0rem 0rem .9375rem 0rem",
+          lg: "2.5rem 1.875rem 1.875rem 1.875rem",
           xl: "5rem 3.75rem 3.75rem 3.75rem",
         }}
-        marginTop={{ base: "-20px" }}
+        marginTop={{ base: "-1.25rem" }}
         alignItems={{ base: "center" }}
         justifyContent={{ base: "center" }}
       >

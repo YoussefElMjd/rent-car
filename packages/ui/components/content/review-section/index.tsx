@@ -34,7 +34,7 @@ export default function ReviewSection(props: IReviewProps) {
           });
           setScrollX(scrollX + scrollAmount);
           setScrollPourcentage(
-            ((scrollX + scrollAmount) / maxScrollable) * 100
+            ((scrollX + scrollAmount) / maxScrollable) * 100,
           );
         }
       }

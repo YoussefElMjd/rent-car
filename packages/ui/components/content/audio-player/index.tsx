@@ -29,7 +29,7 @@ export default function AudioPlayer() {
       textAlign="center"
       position={"fixed"}
       right={0}
-      top={"40px"}
+      top={"2.5rem"}
       zIndex={"10"}
     >
       <audio

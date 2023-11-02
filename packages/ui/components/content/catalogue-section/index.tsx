@@ -1,8 +1,8 @@
 import { HStack, VStack } from "@chakra-ui/react";
 import React from "react";
 import CarCard from "../car-card";
-import TitleContent from "../title-content";
 import ICatalogueProps from "./props";
+import TitleContent from "../title-content";
 
 export default function CatalogueSection(props: ICatalogueProps) {
   const car = [

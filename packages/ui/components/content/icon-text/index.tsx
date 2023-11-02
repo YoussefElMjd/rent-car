@@ -10,7 +10,7 @@ export default function IconText(props: IIConTextProps) {
   return (
     <HStack
       spacing={"1.75rem"}
-      w={{ base: "366px", lg: "35.375rem", xl: "35.375rem" }}
+      w={{ base: "22.875rem", lg: "35.375rem", xl: "35.375rem" }}
       alignItems={"left"}
     >
       <Stack

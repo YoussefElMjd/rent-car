@@ -12,16 +12,16 @@ export default function Header(props: IHeaderProps) {
     <HStack
       alignItems={"center"}
       w={"100%"}
-      spacing={{ base: "10px", lg: "50px", xl: "117px" }}
+      spacing={{ base: ".625rem", lg: "3.125rem", xl: "7.3125rem" }}
       padding={{
-        base: "5px 10px 5px 10px",
-        lg: "15px 50px 15px 50px",
+        base: ".3125rem .625rem .3125rem .625rem",
+        lg: ".9375rem 3.125rem .9375rem 3.125rem",
         xl: "1.75rem 9.375rem 1.75rem 9.375rem",
       }}
     >
       <Text
         color={COLORS.Secondary.value}
-        fontSize={{ base: "30px", lg: "2.25rem", xl: "2.25rem" }}
+        fontSize={{ base: "1.875rem", lg: "2.25rem", xl: "2.25rem" }}
         fontWeight="700"
       >
         RentCarEmirates
@@ -29,9 +29,9 @@ export default function Header(props: IHeaderProps) {
       <HStack
         display={{ base: "none", md: "none", lg: "flex" }}
         spacing={{
-          base: "10px",
-          md: "15px",
-          lg: "30px",
+          base: ".625rem",
+          md: ".9375rem",
+          lg: "1.875rem",
           xl: "2.4375rem",
         }}
         justifyContent={"right"}

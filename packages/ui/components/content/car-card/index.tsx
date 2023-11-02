@@ -146,7 +146,7 @@ export default function CarCard(props: ICarCardProps) {
               >
                 <Button
                   display={{ base: "none", lg: "flex", xl: "flex" }}
-                  paddingInlineStart={"10px"}
+                  paddingInlineStart={".625rem"}
                   bgColor="transparent"
                   w="fit-content"
                   onClick={getPreviousPicture}
@@ -160,7 +160,7 @@ export default function CarCard(props: ICarCardProps) {
                 >
                   <motion.img
                     animate={controls}
-                    style={{ height: "700px", borderRadius: "1.5625rem" }}
+                    style={{ height: "43.75rem", borderRadius: "1.5625rem" }}
                     src={props.pictures[index]}
                   />
                 </Box>
@@ -171,8 +171,8 @@ export default function CarCard(props: ICarCardProps) {
                   <motion.img
                     animate={controls}
                     style={{
-                      height: "600px",
-                      minWidth: "300px",
+                      height: "37.5rem",
+                      minWidth: "18.75rem",
                       borderRadius: "1.5625rem",
                     }}
                     src={props.pictures[index]}
@@ -194,10 +194,10 @@ export default function CarCard(props: ICarCardProps) {
                   justifyContent={"center"}
                   alignItems={"center"}
                   w="full"
-                  spacing={"100px"}
+                  spacing={"6.25rem"}
                 >
                   <Button
-                    paddingInlineStart={"10px"}
+                    paddingInlineStart={".625rem"}
                     bgColor="transparent"
                     w="fit-content"
                     onClick={getPreviousPicture}

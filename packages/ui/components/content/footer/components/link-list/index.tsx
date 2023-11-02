@@ -14,7 +14,7 @@ export default function LinkList(props: ILinkListProps) {
     >
       <Text
         color={COLORS.Secondary.value}
-        fontSize={{ base: "18px", lg: "1.25rem", xl: "1.25rem" }}
+        fontSize={{ base: "1.125rem", lg: "1.25rem", xl: "1.25rem" }}
         fontWeight={"600"}
         lineHeight={"3.125rem"}
         letterSpacing={"-0.025rem"}
@@ -26,7 +26,7 @@ export default function LinkList(props: ILinkListProps) {
         <Link href={e.href} isExternal key={i}>
           <Text
             color={COLORS.Secondary.value}
-            fontSize={{ base: "12px", lg: "1rem", xl: "1rem" }}
+            fontSize={{ base: ".75rem", lg: "1rem", xl: "1rem" }}
             fontWeight={"500"}
             lineHeight={"1.5rem"}
             letterSpacing={"-0.02rem"}
