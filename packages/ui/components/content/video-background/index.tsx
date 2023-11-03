@@ -16,7 +16,7 @@ export default function VideoBackground(props: IVideoProps) {
     >
       <AspectRatio
         ratio={{ base: 16 / 9, lg: 16 / 9, xl: 16 / 9 }}
-        top={{ base: "10rem" }}
+        top={{ base: "10rem", lg: "0rem", xl: "0rem" }}
       >
         <iframe
           className="youtube-video"
