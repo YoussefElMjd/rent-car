@@ -1,4 +1,4 @@
-import { HStack, VStack, forwardRef } from "@chakra-ui/react";
+import { AspectRatio, Box, HStack, VStack, forwardRef } from "@chakra-ui/react";
 import React from "react";
 import Text from "../text";
 import COLORS from "../../../constant/colors";
@@ -19,10 +19,10 @@ const HomeSection = forwardRef((props: IHomeProps, ref) => {
     >
       <VideoBackground
         position={"absolute"}
-        src="https://www.youtube.com/embed/yAo7eSoq2_8"
-        idvideo="yAo7eSoq2_8"
+        src="videos/videoAudiRs7.mp4"
         h={{ base: "12.5rem", lg: "37.5rem", xl: "37.5rem" }}
       />
+
       <VStack
         spacing={{ base: ".3125rem", lg: "2.4375rem", xl: "2.4375rem" }}
         alignItems={"left"}
