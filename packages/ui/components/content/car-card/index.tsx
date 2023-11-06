@@ -1,6 +1,7 @@
 import {
   Box,
   HStack,
+  Image,
   Img,
   Modal,
   ModalBody,
@@ -164,20 +165,36 @@ export default function CarCard(props: ICarCardProps) {
                     src={props.pictures[index]}
                   />
                 </Box>
-                <Box
+                <HStack
                   display={{ base: "flex", lg: "none", xl: "none" }}
                   w="full"
+                  overflowX={"scroll"}
+                  spacing="25px"
+                  sx={{
+                    "&::-webkit-scrollbar": {
+                      bgColor: "rgba(0,0,0)",
+                      width: ".625rem",
+                      height: ".625rem",
+                    },
+                    "&::-webkit-scrollbar-thumb": {
+                      bgColor: COLORS.Secondary.value,
+                      borderRadius: ".625rem",
+                      width: ".625rem",
+                      height: ".625rem",
+                    },
+                  }}
                 >
-                  <motion.img
-                    animate={controls}
-                    style={{
-                      height: "37.5rem",
-                      minWidth: "18.75rem",
-                      borderRadius: "1.5625rem",
-                    }}
-                    src={props.pictures[index]}
-                  />
-                </Box>
+                  {props.pictures.map((e, i) => {
+                    return (
+                      <Image
+                        height={"600px"}
+                        borderRadius={"1.5625rem"}
+                        src={e}
+                        key="i"
+                      />
+                    );
+                  })}
+                </HStack>
 
                 <Button
                   display={{ base: "none", lg: "flex", xl: "flex" }}
@@ -188,32 +205,6 @@ export default function CarCard(props: ICarCardProps) {
                 >
                   <Icon name="nextArrow" />
                 </Button>
-
-                <HStack
-                  display={{ base: "flex", lg: "none", xl: "none" }}
-                  justifyContent={"center"}
-                  alignItems={"center"}
-                  w="full"
-                  spacing={"6.25rem"}
-                >
-                  <Button
-                    paddingInlineStart={".625rem"}
-                    bgColor="transparent"
-                    w="fit-content"
-                    onClick={getPreviousPicture}
-                    zIndex={1}
-                  >
-                    <Icon name="previousArrow" />
-                  </Button>
-                  <Button
-                    paddingInlineEnd={"0"}
-                    bgColor="transparent"
-                    w="fit-content"
-                    onClick={getNextPicture}
-                  >
-                    <Icon name="nextArrow" />
-                  </Button>
-                </HStack>
               </Stack>
             </ModalBody>
           </VStack>
