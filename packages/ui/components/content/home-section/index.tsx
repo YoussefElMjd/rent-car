@@ -16,6 +16,7 @@ const HomeSection = forwardRef((props: IHomeProps, ref) => {
       justifyContent={"center"}
       alignItems={"center"}
       position={"relative"}
+      bgColor={"rgba(0,0,0,0.5)"}
     >
       <VideoBackground
         position={"absolute"}
@@ -84,18 +85,6 @@ const HomeSection = forwardRef((props: IHomeProps, ref) => {
           </Text>
         </Button>
       </VStack>
-      {/* <Stack w={"full"} alignItems={"flex-end"}>
-        <Img
-          w={["9.375rem", "18.75rem", "43.75rem"]}
-          h={["9.375rem", "18.75rem", "43.75rem"]}
-          bgColor={"transparent"}
-          src={`/images/class_g/Class_G_Orange_outside_front.jpg`}
-          backgroundSize="cover"
-          backgroundPosition="center"
-          backgroundRepeat="no-repeat"
-          borderRadius="3.9375rem 0rem 0rem 0rem"
-        />
-      </Stack> */}
     </HStack>
   );
 });
