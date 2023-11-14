@@ -22,6 +22,21 @@ const theme = extendTheme({
         background: COLORS.Secondary.value,
         filter: "saturate(200%)",
       },
+
+      ".rdrDefinedRangesWrapper": {
+        display: "none",
+      },
+      ".rdrDayToday .rdrDayNumber span": {
+        "&:after": {
+          background: "#D8781F",
+        },
+      },
+      ".rdrCalendarWrapper": {
+        borderRadius: "15px",
+      },
+      ".rdrDateDisplayWrapper": {
+        borderRadius: "15px",
+      },
     }),
   },
 });

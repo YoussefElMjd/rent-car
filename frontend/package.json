@@ -8,6 +8,7 @@
     "start": "next start -p 8080"
   },
   "devDependencies": {
+    "@types/react-date-range": "^1.4.8",
     "eslint": "^8.48.0",
     "prettier": "^3.0.3",
     "tsconfig": "*",
@@ -23,6 +24,7 @@
     "@chakra-ui/react": "^2.8.1",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
-    "framer-motion": "^10.16.4"
+    "framer-motion": "^10.16.4",
+    "react-date-range": "^1.4.0"
   }
 }
