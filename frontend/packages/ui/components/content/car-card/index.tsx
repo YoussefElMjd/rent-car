@@ -20,26 +20,14 @@ import Icon from "../../../contents/icon";
 import { motion, useAnimationControls } from "framer-motion";
 import Text from "../text";
 import Reveal from "../reveal";
-import InputText from "../../inputs/inputs-text";
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
-import { DateRangePicker } from "react-date-range";
-
+import FormModal from "./modals/form-modal/index";
 export default function CarCard(props: ICarCardProps) {
   const [index, setIndex] = useState<number>(0);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const rentModal = useDisclosure();
   const controls = useAnimationControls();
-  const selectionRange = {
-    startDate: new Date(),
-    endDate: new Date(),
-    key: "selection",
-  };
-
-  function handleSelect(ranges: any) {
-    selectionRange.startDate = ranges.selection.startDate;
-    selectionRange.endDate = ranges.selection.endDate;
-  }
 
   function setAnimationNext() {
     controls.set({ opacity: 0, x: 70 });
@@ -119,7 +107,7 @@ export default function CarCard(props: ICarCardProps) {
             bgColor={COLORS.Primary.value}
             hoverBgColor={COLORS.Primary.value}
             onClick={() => {
-              props.onClick, rentModal.onOpen();
+              rentModal.onOpen();
             }}
           >
             <Text
@@ -227,51 +215,11 @@ export default function CarCard(props: ICarCardProps) {
           </VStack>
         </ModalContent>
       </Modal>
-
-      <Modal isOpen={rentModal.isOpen} onClose={rentModal.onClose}>
-        <ModalOverlay backdropFilter="auto" backdropBlur=".125rem" />
-        <ModalContent
-          minW={{ base: "full", lg: "50rem", xl: "50rem" }}
-          h={"50rem"}
-          justifyContent="center"
-          alignItems="center"
-          borderRadius={".9375rem"}
-          bgColor={COLORS.Primary.value}
-        >
-          <VStack>
-            <ModalCloseButton
-              bgColor={COLORS.Secondary.value}
-              color={COLORS.Third.value}
-              _hover={{ filter: "saturate(200%)" }}
-            />
-            <ModalBody>
-              <VStack
-                position={"relative"}
-                justifyContent={"center"}
-                alignItems={"center"}
-              >
-                <InputText
-                  type="number"
-                  label="Phone Number"
-                  placeholder="Enter your phone number"
-                />
-                <InputText
-                  type="email"
-                  label="Email Address"
-                  placeholder="Enter your email address"
-                />
-                <DateRangePicker
-                  ranges={[selectionRange]}
-                  onChange={handleSelect}
-                  rangeColors={[COLORS.Secondary.value]}
-                  staticRanges={[]}
-                  inputRanges={[]}
-                />
-              </VStack>
-            </ModalBody>
-          </VStack>
-        </ModalContent>
-      </Modal>
+      <FormModal
+        carId={props.carId}
+        isOpen={rentModal.isOpen}
+        onClose={rentModal.onClose}
+      />
     </VStack>
   );
 }

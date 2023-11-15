@@ -2,6 +2,7 @@ package com.rentalcaremirats.app.model;
 
 import java.time.LocalDate;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import groovyjarjarantlr4.v4.runtime.misc.NotNull;
@@ -11,7 +12,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.validation.constraints.Future;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
@@ -26,10 +28,13 @@ public class Rent {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @NotBlank(message = "Need to provide a email")
+    private String email;
     @NotBlank(message = "Need to provide a phone number")
     private String phoneNumber;
-    @OneToOne(cascade = CascadeType.MERGE)
-    @JoinColumn(name = "car_id", unique = true, nullable = false)
+    @JsonBackReference
+    @ManyToOne
+    @JoinColumn(name = "car")
     private Car car;
     @NotNull()
     @JsonFormat(pattern = "yyyy-MM-dd")
@@ -38,5 +43,10 @@ public class Rent {
     @Future
     @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate endDateRent;
+
+    @Override
+    public String toString() {
+        return "Rent [ email: " + email + ", phone number: " + phoneNumber;
+    }
 
 }

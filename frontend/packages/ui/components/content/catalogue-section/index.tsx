@@ -3,8 +3,10 @@ import React from "react";
 import CarCard from "../car-card";
 import ICatalogueProps from "./props";
 import TitleContent from "../title-content";
+import { useCatalogueLogics } from "./logic";
 
 export default function CatalogueSection(props: ICatalogueProps) {
+  const { carData } = useCatalogueLogics();
   const car = [
     <CarCard
       title="Class G Mansory"
@@ -14,6 +16,7 @@ export default function CatalogueSection(props: ICatalogueProps) {
         "/images/class_g/Class_G_Orange_inside.jpg",
       ]}
       pricePerDay="500"
+      carId="1"
     />,
     <CarCard
       title="Class G Mansory"
@@ -23,6 +26,7 @@ export default function CatalogueSection(props: ICatalogueProps) {
         "/images/class_g/Class_G_Orange_inside.jpg",
       ]}
       pricePerDay="500"
+      carId="1"
     />,
     <CarCard
       title="Class G Mansory"
@@ -32,6 +36,7 @@ export default function CatalogueSection(props: ICatalogueProps) {
         "/images/class_g/Class_G_Orange_inside.jpg",
       ]}
       pricePerDay="500"
+      carId="1"
     />,
     <CarCard
       title="Class G Mansory"
@@ -41,6 +46,7 @@ export default function CatalogueSection(props: ICatalogueProps) {
         "/images/class_g/Class_G_Orange_inside.jpg",
       ]}
       pricePerDay="500"
+      carId="1"
     />,
     <CarCard
       title="Class G Mansory"
@@ -50,6 +56,7 @@ export default function CatalogueSection(props: ICatalogueProps) {
         "/images/class_g/Class_G_Orange_inside.jpg",
       ]}
       pricePerDay="500"
+      carId="1"
     />,
     <CarCard
       title="Class G Mansory"
@@ -59,6 +66,7 @@ export default function CatalogueSection(props: ICatalogueProps) {
         "/images/class_g/Class_G_Orange_inside.jpg",
       ]}
       pricePerDay="500"
+      carId="1"
     />,
     <CarCard
       title="Class G Mansory"
@@ -68,6 +76,7 @@ export default function CatalogueSection(props: ICatalogueProps) {
         "/images/class_g/Class_G_Orange_inside.jpg",
       ]}
       pricePerDay="500"
+      carId="1"
     />,
     <CarCard
       title="Class G Mansory"
@@ -77,6 +86,7 @@ export default function CatalogueSection(props: ICatalogueProps) {
         "/images/class_g/Class_G_Orange_inside.jpg",
       ]}
       pricePerDay="500"
+      carId="1"
     />,
     <CarCard
       title="Class G Mansory"
@@ -86,6 +96,7 @@ export default function CatalogueSection(props: ICatalogueProps) {
         "/images/class_g/Class_G_Orange_inside.jpg",
       ]}
       pricePerDay="500"
+      carId="1"
     />,
     <CarCard
       title="Class G Mansory"
@@ -95,6 +106,7 @@ export default function CatalogueSection(props: ICatalogueProps) {
         "/images/class_g/Class_G_Orange_inside.jpg",
       ]}
       pricePerDay="500"
+      carId="1"
     />,
     <CarCard
       title="Class G Mansory"
@@ -104,6 +116,7 @@ export default function CatalogueSection(props: ICatalogueProps) {
         "/images/class_g/Class_G_Orange_inside.jpg",
       ]}
       pricePerDay="500"
+      carId="1"
     />,
     <CarCard
       title="Class G Mansory"
@@ -113,6 +126,7 @@ export default function CatalogueSection(props: ICatalogueProps) {
         "/images/class_g/Class_G_Orange_inside.jpg",
       ]}
       pricePerDay="500"
+      carId="1"
     />,
   ];
   return (
@@ -135,7 +149,19 @@ export default function CatalogueSection(props: ICatalogueProps) {
         justifyContent={"center"}
         alignItems={"center"}
       >
-        {car.map((element, i) => element)}
+        {carData?.map((car) => (
+          <CarCard
+            title={car.carName}
+            pictures={[
+              "/images/class_g/Class_G_Orange_outside_front.jpg",
+              "/images/class_g/Class_G_Orange_outside.jpg",
+              "/images/class_g/Class_G_Orange_inside.jpg",
+            ]}
+            pricePerDay={car.rentPrice}
+            carId={car.id}
+          />
+        ))}
+        {/* {car.map((element, i) => element)} */}
       </HStack>
     </VStack>
   );

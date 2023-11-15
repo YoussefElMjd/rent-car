@@ -6,7 +6,7 @@ import COLORS from "../../../constant/colors";
 
 export default function InputText(props: IInputTextProps) {
   return (
-    <VStack alignItems={"left"} spacing={"0px"}>
+    <VStack alignItems={"left"} spacing={"0px"} w="100%">
       <Text
         color={COLORS.Third.value}
         fontSize={"15px"}
@@ -17,6 +17,10 @@ export default function InputText(props: IInputTextProps) {
       </Text>
 
       <Input
+        {...props}
+        onChange={(e) => {
+          props.onChange && props.onChange(e.currentTarget.value);
+        }}
         type={props.type}
         placeholder={props.placeholder}
         bgColor={COLORS.Third.value}

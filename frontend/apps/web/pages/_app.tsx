@@ -5,7 +5,14 @@ import React from "react";
 import { ChakraProvider } from "@chakra-ui/react";
 import Head from "next/head";
 import theme from "../../../packages/ui/pages/theme";
-
+import { QueryClient, QueryClientProvider } from "react-query";
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false,
+    },
+  },
+});
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
@@ -30,7 +37,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         ></meta>
       </Head>
       <ChakraProvider theme={theme}>
-        <Component {...pageProps} />
+        <QueryClientProvider client={queryClient}>
+          <Component {...pageProps} />
+        </QueryClientProvider>
       </ChakraProvider>
     </>
   );
