@@ -1,6 +1,11 @@
 package com.rentalcaremirats.app.web;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
@@ -42,6 +47,20 @@ public class ApiController {
     public ResponseEntity<List<Car>> getCars() {
         List<Car> cars = (List<Car>) carDB.findAll();
         return new ResponseEntity<>(cars, HttpStatus.ACCEPTED);
+    }
+
+    @GetMapping("/car/{id}/rent/unable_date")
+    public ResponseEntity<Set<LocalDate>> getUnableDateRentCar(@PathVariable Integer id) {
+        Car car = carDB.findById(id).get();
+        List<Rent> rents = (List<Rent>) rentRepository.findAllByCar(car);
+        Set<LocalDate> unableDate = new HashSet<LocalDate>();
+        for (Rent rent : rents) {
+            unableDate.add(rent.getStartDateRent());
+            unableDate.add(rent.getEndDateRent());
+            unableDate.addAll(rent.getStartDateRent().datesUntil(rent.getEndDateRent()).collect(Collectors.toList()));
+        }
+
+        return new ResponseEntity<>(unableDate, HttpStatus.ACCEPTED);
     }
 
     @GetMapping("/car/{name}")

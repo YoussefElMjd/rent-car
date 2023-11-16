@@ -1,6 +1,7 @@
 package com.rentalcaremirats.app.model;
 
 import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -31,6 +32,7 @@ public class Car {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     // @NotBlank(message = "Car name is required")
+    @Column(unique = true)
     private String carName;
     // @NotBlank(message = "Car power is required")
     private int carPower;

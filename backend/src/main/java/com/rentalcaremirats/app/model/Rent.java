@@ -37,16 +37,11 @@ public class Rent {
     @JoinColumn(name = "car")
     private Car car;
     @NotNull()
-    @JsonFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(pattern = "dd-MM-yyyy")
     private LocalDate startDateRent;
     @NotNull()
     @Future
-    @JsonFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(pattern = "dd-MM-yyyy")
     private LocalDate endDateRent;
-
-    @Override
-    public String toString() {
-        return "Rent [ email: " + email + ", phone number: " + phoneNumber;
-    }
 
 }
