@@ -1,25 +1,51 @@
 import { useFormik } from "formik";
 import { createForm } from "../../../../utils/formik";
-import IUseCarCardLogicsTypes, { IUseCarCardForm } from "./types";
+import IUseCarCardLogicsTypes, { IUseCarCardForm, RentBodyData } from "./types";
 import { IUseCarCardLogicsProps } from "./props";
-
+import { useMutation, useQuery } from "react-query";
+import axios from "axios";
+import moment from "moment";
+import { getUnableDateRent } from "../../../../fetchers/rent";
 export const useCarCardLogic = (
   props: IUseCarCardLogicsProps
 ): IUseCarCardLogicsTypes => {
+  const mutation = useMutation((newRent: RentBodyData) => {
+    return axios.post("http://localhost:8080/api/add/rent", newRent);
+  });
+
   const { values, ...rest } = useFormik<IUseCarCardForm>({
     initialValues: {
       carId: props.carId,
       email: "",
       phoneNumber: "",
-      startRentDate: new Date(),
-      endRentDate: new Date(),
+      startDateRent: new Date(),
+      endDateRent: new Date(),
     },
     onSubmit: (values) => {
-      console.log(values);
+      mutation.mutate({
+        car: { id: values.carId },
+        email: values.email,
+        phoneNumber: values.phoneNumber,
+        startDateRent: moment(values.startDateRent).format("DD-MM-YYYY"),
+        endDateRent: moment(values.endDateRent).format("DD-MM-YYYY"),
+      });
+      form.email.onChange("");
+      form.phoneNumber.onChange("");
+      form.startDateRent.onChange(new Date());
+      form.endDateRent.onChange(new Date());
     },
     validateOnChange: false,
   });
 
   const form = createForm(values, rest);
-  return { form };
+  const {
+    data: unableDateRent,
+    error,
+    isLoading,
+    refetch,
+  } = useQuery(["id", form.carId], () => getUnableDateRent(form.carId?.value), {
+    staleTime: Infinity,
+  });
+
+  return { form, unableDateRent, refetch };
 };

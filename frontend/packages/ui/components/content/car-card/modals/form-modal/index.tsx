@@ -12,22 +12,22 @@ import InputText from "../../../../inputs/inputs-text";
 import { DateRangePicker } from "react-date-range";
 import Button from "../../../../inputs/button";
 import Text from "../../../text";
-import moment from "moment";
 import { useCarCardLogic } from "../../logic";
 import IFormModalProps from "./props";
 
 export default function FormModal(props: IFormModalProps) {
-  const { form } = useCarCardLogic({ carId: props.carId });
+  const { form, unableDateRent, refetch } = useCarCardLogic({
+    carId: props.carId,
+  });
   const selectionRange = {
-    startDate: form.startRentDate.value,
-    endDate: form.endRentDate.value,
+    startDate: form.startDateRent.value,
+    endDate: form.endDateRent.value,
     key: "selection",
   };
 
   function handleSelect(ranges: any) {
-    console.log(moment(ranges.selection.startDate).format("DD-MM-YYYY"));
-    form.startRentDate.onChange(ranges.selection.startDate);
-    form.endRentDate.onChange(ranges.selection.endDate);
+    form.startDateRent.onChange(ranges.selection.startDate);
+    form.endDateRent.onChange(ranges.selection.endDate);
     selectionRange.startDate = ranges.selection.startDate;
 
     selectionRange.endDate = ranges.selection.endDate;
@@ -75,6 +75,7 @@ export default function FormModal(props: IFormModalProps) {
                 rangeColors={[COLORS.Secondary.value]}
                 staticRanges={[]}
                 inputRanges={[]}
+                disabledDates={unableDateRent}
                 minDate={new Date()}
               />
               <Button
@@ -84,6 +85,8 @@ export default function FormModal(props: IFormModalProps) {
                 hoverBgColor={COLORS.Third.value}
                 onClick={() => {
                   form.submitForm();
+                  props.onClose();
+                  refetch();
                 }}
               >
                 <Text

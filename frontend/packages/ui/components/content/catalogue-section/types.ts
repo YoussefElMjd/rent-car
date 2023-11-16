@@ -3,9 +3,9 @@ export default interface useCatalogueLogicsType {
 }
 
 export interface CarDTO {
-  id: string;
-  carName: string;
-  carPower: number;
-  carDeposit: number;
-  rentPrice: number;
+  id?: string;
+  carName?: string;
+  carPower?: number;
+  carDeposit?: number;
+  rentPrice?: number;
 }

@@ -16,13 +16,16 @@ export default function VideoBackground(props: IVideoProps) {
     >
       <AspectRatio
         ratio={16 / 9}
-        top={{ base: "0rem", lg: "-10rem", xl: "-10rem" }}
+        top={{
+          base: "0rem",
+          lg: "-10rem",
+          xl: "-10rem",
+        }}
       >
         <video
           autoPlay={true}
           muted={true}
           loop={true}
-          controls={true}
           playsInline={true}
           preload={"auto"}
         >

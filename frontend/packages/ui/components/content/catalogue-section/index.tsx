@@ -7,6 +7,8 @@ import { useCatalogueLogics } from "./logic";
 
 export default function CatalogueSection(props: ICatalogueProps) {
   const { carData } = useCatalogueLogics();
+  console.log(carData);
+
   const car = [
     <CarCard
       title="Class G Mansory"

@@ -38,7 +38,7 @@ export default function CarCard(props: ICarCardProps) {
     controls.start({ opacity: 1, x: 0, transition: { duration: 0.5 } });
   }
   function getNextPicture() {
-    if (index == props.pictures.length - 1) {
+    if (props.pictures && index == props.pictures.length - 1) {
       setIndex(0);
     } else {
       setIndex(index + 1);
@@ -46,7 +46,7 @@ export default function CarCard(props: ICarCardProps) {
     setAnimationNext();
   }
   function getPreviousPicture() {
-    if (index == 0) {
+    if (index == 0 && props.pictures) {
       setIndex(props.pictures.length - 1);
     } else {
       setIndex(index - 1);
@@ -74,7 +74,11 @@ export default function CarCard(props: ICarCardProps) {
       </Reveal>
       <Reveal>
         <Stack h={"18.75rem"} w="full" position={"relative"}>
-          <Img height="18.75rem" src={props.pictures[1]} onClick={onOpen} />
+          <Img
+            height="18.75rem"
+            src={props.pictures && props.pictures[1]}
+            onClick={onOpen}
+          />
         </Stack>
       </Reveal>
       <Reveal>
@@ -167,7 +171,7 @@ export default function CarCard(props: ICarCardProps) {
                   <motion.img
                     animate={controls}
                     style={{ height: "43.75rem", borderRadius: "1.5625rem" }}
-                    src={props.pictures[index]}
+                    src={props.pictures && props.pictures[index]}
                   />
                 </Box>
                 <HStack
@@ -189,16 +193,17 @@ export default function CarCard(props: ICarCardProps) {
                     },
                   }}
                 >
-                  {props.pictures.map((e, i) => {
-                    return (
-                      <Image
-                        height={"600px"}
-                        borderRadius={"1.5625rem"}
-                        src={e}
-                        key="i"
-                      />
-                    );
-                  })}
+                  {props.pictures &&
+                    props.pictures.map((e, i) => {
+                      return (
+                        <Image
+                          height={"600px"}
+                          borderRadius={"1.5625rem"}
+                          src={e}
+                          key="i"
+                        />
+                      );
+                    })}
                 </HStack>
 
                 <Button

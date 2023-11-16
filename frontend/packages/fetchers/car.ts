@@ -14,3 +14,5 @@ export async function getCars(): Promise<CarDTO[]> {
 
   return result;
 }
+
+export async function addRent() {}

@@ -1,5 +1,5 @@
 export default interface IFormModalProps {
-  carId: string;
+  carId?: string;
   isOpen: boolean;
   onClose: () => void;
 }
