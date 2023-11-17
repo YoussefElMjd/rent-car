@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Properties;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -24,9 +25,12 @@ import com.rentalcaremirats.app.model.Car;
 import com.rentalcaremirats.app.model.Rent;
 import com.rentalcaremirats.app.repository.CarDB;
 import com.rentalcaremirats.app.repository.RentRepository;
+import com.rentalcaremirats.app.utils.*;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import java.util.*;
+import javax.mail.MessagingException;
 
 @ComponentScan
 @Service
@@ -90,8 +94,83 @@ public class ApiController {
 
     @PostMapping("/add/rent")
     public String addCar(@RequestBody Rent rent) {
+        rent.setReservationNumber(ReservatieUtil.generateReservationNumber());
         rentRepository.save(rent);
+        sendEmail(rent);
         return "Car successfully added";
+    }
+
+    private void sendEmail(Rent rent) {
+        Car car = carDB.findById(rent.getCar().getId()).get();
+
+        String htmlBody = "<!DOCTYPE html>\n" +
+                "<html lang=\"en\">\n" +
+                "<head>\n" +
+                "    <meta charset=\"UTF-8\">\n" +
+                "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n" +
+                "    <title>Car Rent Confirmation</title>\n" +
+                "    <style>\n" +
+                "        body {\n" +
+                "            font-family: Arial, sans-serif;\n" +
+                "            line-height: 1.6;\n" +
+                "            color: #000000;\n" +
+                "        }\n" +
+                "        .container {\n" +
+                "            max-width: 600px;\n" +
+                "            margin: 0 auto;\n" +
+                "        }\n" +
+                "        .header {\n" +
+                "            background-color: #D8781F;\n" +
+                "            color: white;\n" +
+                "            padding: 1em;\n" +
+                "            text-align: center;\n" +
+                "        }\n" +
+                "        .content {\n" +
+                "            padding: 1em;\n" +
+                "        }\n" +
+                "        .footer {\n" +
+                "            background-color: #f1f1f1;\n" +
+                "            padding: 1em;\n" +
+                "            text-align: center;\n" +
+                "        }\n" +
+                "    </style>\n" +
+                "</head>\n" +
+                "<body>\n" +
+                "    <div class=\"container\">\n" +
+                "        <div class=\"header\">\n" +
+                "            <h1>Rent Confirmation</h1>\n" +
+                "        </div>\n" +
+                "        <div class=\"content\">\n" +
+                "            <p>Dear " + rent.getEmail() + ", </p>\n" +
+                "            <p>We are pleased to confirm the rental of the following car:</p>\n" +
+                "            <p><strong>Car Details:</strong></p>\n" +
+                "            <ul>\n" +
+                "<li><strong>Reservation Number</strong> " + rent.getReservationNumber() + "</li>\n" +
+                "                <li><strong>Car Name:</strong> " + car.getCarName() + "</li>\n" +
+                "                <li><strong>Rental Start Date:</strong> " + rent.getStartDateRent() + "</li>\n" +
+                "                <li><strong>Rental End Date:</strong> " + rent.getEndDateRent() + "</li>\n" +
+                "            </ul>\n" +
+                "            <p><strong>Additional Information:</strong></p>\n" +
+                "            <p>To proceed with the cancellation, kindly visit our website. Once logged in, navigate to the \"My Reservations\" section and enter your reservation number. Follow the on-screen instructions to complete the cancellation process.</p>\n"
+                +
+                "            <p>We appreciate your business and look forward to serving you. If you have any questions or need further assistance, please contact our customer support at [Customer Support Email or Phone Number].</p>\n"
+                +
+                "        </div>\n" +
+                "        <div class=\"footer\">\n" +
+                "            <p>Thank you for choosing RentCarEmirats for your car rental needs.</p>\n" +
+                "            <p>Best regards,<br>RentCarEmirats<br>https://rental-car-emirats.vercel.app/</p>\n" +
+                "        </div>\n" +
+                "    </div>\n" +
+                "</body>\n" +
+                "</html>";
+
+        try {
+            // Send the confirmation email
+            EmailUtil.sendConfirmationEmail(rent.getEmail(), "Car Rental Confirmation", htmlBody);
+            System.out.println("Rent confirmation email sent successfully.");
+        } catch (MessagingException e) {
+            System.err.println("Error sending rent confirmation email: " + e.getMessage());
+        }
     }
 
 }

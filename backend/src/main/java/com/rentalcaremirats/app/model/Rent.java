@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 import groovyjarjarantlr4.v4.runtime.misc.NotNull;
 import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -28,6 +29,9 @@ public class Rent {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @NotBlank(message = "Need to provide a reservationNumber")
+    @Column(unique = true)
+    private String reservationNumber;
     @NotBlank(message = "Need to provide a email")
     private String email;
     @NotBlank(message = "Need to provide a phone number")
