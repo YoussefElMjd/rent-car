@@ -9,9 +9,16 @@ import { getUnableDateRent } from "../../../../fetchers/rent";
 export const useCarCardLogic = (
   props: IUseCarCardLogicsProps
 ): IUseCarCardLogicsTypes => {
-  const mutation = useMutation((newRent: RentBodyData) => {
-    return axios.post("http://localhost:8080/api/add/rent", newRent);
-  });
+  const mutation = useMutation(
+    (newRent: RentBodyData) => {
+      return axios.post("http://localhost:8080/api/add/rent", newRent);
+    },
+    {
+      onSuccess: () => {
+        refetch();
+      },
+    }
+  );
 
   const { values, ...rest } = useFormik<IUseCarCardForm>({
     initialValues: {

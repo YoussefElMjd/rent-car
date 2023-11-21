@@ -4,13 +4,14 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Properties;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import org.apache.catalina.connector.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -27,6 +28,7 @@ import com.rentalcaremirats.app.repository.CarDB;
 import com.rentalcaremirats.app.repository.RentRepository;
 import com.rentalcaremirats.app.utils.*;
 
+import jakarta.transaction.Transactional;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import java.util.*;
@@ -70,7 +72,6 @@ public class ApiController {
     @GetMapping("/car/{name}")
     public ResponseEntity<Car> getCarByName(@PathVariable String name) {
         Car car = carDB.findByCarName(name);
-        System.out.println(car);
         return new ResponseEntity<>(car, HttpStatus.ACCEPTED);
     }
 
@@ -87,8 +88,8 @@ public class ApiController {
     }
 
     @GetMapping("/rent")
-    public ResponseEntity<List<Rent>> getRent(@RequestBody String phoneNumber) {
-        List<Rent> rents = (List<Rent>) rentRepository.findAllByPhoneNumber(phoneNumber);
+    public ResponseEntity<List<Rent>> getRent(@RequestBody Rent rent) {
+        List<Rent> rents = (List<Rent>) rentRepository.findAllByPhoneNumber(rent.getPhoneNumber());
         return new ResponseEntity<>(rents, HttpStatus.ACCEPTED);
     }
 
@@ -98,6 +99,19 @@ public class ApiController {
         rentRepository.save(rent);
         sendEmail(rent);
         return "Car successfully added";
+    }
+
+    @PostMapping("/rent/reservation")
+    public ResponseEntity<Rent> getRentByReservationNumber(@RequestBody Rent rent) {
+        Rent result = rentRepository.findByReservationNumber(rent.getReservationNumber());
+        return new ResponseEntity<Rent>(result, HttpStatus.ACCEPTED);
+    }
+
+    @Transactional
+    @PostMapping("/rent/reservation/delete")
+    public ResponseEntity<String> deleteRentByReservation(@RequestBody Rent rent) {
+        rentRepository.deleteByReservationNumber(rent.getReservationNumber());
+        return new ResponseEntity<String>("Rent Successfully Deleted", HttpStatus.ACCEPTED);
     }
 
     private void sendEmail(Rent rent) {

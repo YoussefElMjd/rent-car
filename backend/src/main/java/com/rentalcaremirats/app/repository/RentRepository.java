@@ -12,4 +12,8 @@ public interface RentRepository extends JpaRepository<Rent, Integer> {
     public List<Rent> findAllByPhoneNumber(String number);
 
     public List<Rent> findAllByCar(Car car);
+
+    public Rent findByReservationNumber(String reservationNumber);
+
+    public void deleteByReservationNumber(String reservationNumber);
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, HStack } from "@chakra-ui/react";
+import { Box, HStack, Stack } from "@chakra-ui/react";
 import Text from "../text";
 import COLORS from "../../../constant/colors";
 import Link from "../../navigation/link";
@@ -84,39 +84,24 @@ export default function Header(props: IHeaderProps) {
           w=".0625rem"
           padding="0rem"
           margin={"-1.25rem"}
-          marginRight={"-2rem"}
         />
-        <HStack>
-          <Button
-            bgColor={"transparent"}
-            w="5.125rem"
-            h="2.375rem"
-            _hover={{
-              filter: "saturate(200%)",
-            }}
-          >
-            <Text
-              color={COLORS.Third.value}
-              fontSize={".875rem"}
-              textDecoration={"underline"}
-            >
-              Register
-            </Text>
-          </Button>
-          <Button
-            bgColor={COLORS.Secondary.value}
-            w="5.125rem"
-            h="2.375rem"
-            borderRadius=".3125rem"
-            _hover={{
-              filter: "saturate(200%)",
-            }}
-          >
+        <Stack
+          bgColor={COLORS.Secondary.value}
+          w="125px"
+          h="2.375rem"
+          borderRadius=".3125rem"
+          _hover={{
+            filter: "saturate(200%)",
+          }}
+          justifyContent={"center"}
+          alignItems={"center"}
+        >
+          <Link href="/reservation">
             <Text color={COLORS.Third.value} fontSize={".875rem"}>
-              Login
+              My Reservation
             </Text>
-          </Button>
-        </HStack>
+          </Link>
+        </Stack>
       </HStack>
       <HStack
         display={{ base: "flex", md: "flex", lg: "none" }}
