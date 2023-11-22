@@ -6,6 +6,8 @@ import { useMutation, useQuery } from "react-query";
 import axios from "axios";
 import moment from "moment";
 import { getUnableDateRent } from "../../../../fetchers/rent";
+import { AlertType } from "../../../logics/useToast/types";
+import useToast from "../../../logics/useToast/logic";
 export const useCarCardLogic = (
   props: IUseCarCardLogicsProps
 ): IUseCarCardLogicsTypes => {
@@ -29,13 +31,22 @@ export const useCarCardLogic = (
       endDateRent: new Date(),
     },
     onSubmit: (values) => {
-      mutation.mutate({
-        car: { id: values.carId },
-        email: values.email,
-        phoneNumber: values.phoneNumber,
-        startDateRent: moment(values.startDateRent).format("DD-MM-YYYY"),
-        endDateRent: moment(values.endDateRent).format("DD-MM-YYYY"),
-      });
+      mutation.mutate(
+        {
+          car: { id: values.carId },
+          email: values.email,
+          phoneNumber: values.phoneNumber,
+          startDateRent: moment(values.startDateRent).format("DD-MM-YYYY"),
+          endDateRent: moment(values.endDateRent).format("DD-MM-YYYY"),
+        },
+        {
+          onSuccess: () =>
+            useToast({
+              title: "Successfully Car Rental",
+              type: AlertType.SUCCESS,
+            }),
+        }
+      );
       form.email.onChange("");
       form.phoneNumber.onChange("");
       form.startDateRent.onChange(new Date());

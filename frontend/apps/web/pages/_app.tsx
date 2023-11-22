@@ -6,6 +6,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import Head from "next/head";
 import theme from "../../../packages/ui/pages/theme";
 import { QueryClient, QueryClientProvider } from "react-query";
+import { ToastContainer } from "react-toastify";
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -38,6 +39,18 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <ChakraProvider theme={theme}>
         <QueryClientProvider client={queryClient}>
+          <ToastContainer
+            position="bottom-center"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover={false}
+            theme="colored"
+          />
           <Component {...pageProps} />
         </QueryClientProvider>
       </ChakraProvider>

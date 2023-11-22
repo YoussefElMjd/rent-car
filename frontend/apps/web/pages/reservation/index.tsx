@@ -4,7 +4,7 @@ import ReservationManageForm from "./../../../../packages/ui/components/content/
 
 export default function Reservation() {
   return (
-    <VStack overflowX="hidden">
+    <VStack overflow="hidden">
       <ReservationManageForm />
     </VStack>
   );

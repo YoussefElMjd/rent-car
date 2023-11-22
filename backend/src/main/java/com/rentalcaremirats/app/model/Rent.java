@@ -4,6 +4,7 @@ import java.time.LocalDate;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import groovyjarjarantlr4.v4.runtime.misc.NotNull;
 import jakarta.persistence.CascadeType;
@@ -36,7 +37,7 @@ public class Rent {
     private String email;
     @NotBlank(message = "Need to provide a phone number")
     private String phoneNumber;
-    @JsonBackReference
+    @JsonIgnoreProperties("rents")
     @ManyToOne
     @JoinColumn(name = "car")
     private Car car;

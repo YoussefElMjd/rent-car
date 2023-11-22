@@ -3,22 +3,24 @@ import { createForm } from "../../../../utils/formik";
 import IUseReservationManageFormLogicsTypes, {
   IUseReservationManageForm,
   RentBody,
-  RentResponseData,
 } from "./types";
 import { UseMutationResult, useMutation } from "react-query";
 import axios from "axios";
-import { useEffect } from "react";
+import RentDTO from "../../../../dto/rent-dto";
+import { AlertType } from "../../../logics/useToast/types";
+import useToast from "../../../logics/useToast/logic";
 
 export default function useReservationManageFormLogics(): IUseReservationManageFormLogicsTypes {
-  const mutation: UseMutationResult<RentResponseData, unknown, RentBody> =
-    useMutation(async (reservationNumber: RentBody) => {
+  const mutation: UseMutationResult<RentDTO, unknown, RentBody> = useMutation(
+    async (reservationNumber: RentBody) => {
       const response = await axios.post(
         "http://localhost:8080/api/rent/reservation",
         reservationNumber
       );
 
-      return response.data as RentResponseData;
-    });
+      return response.data as RentDTO;
+    }
+  );
 
   const deleteMutation = useMutation(
     (reservationNumber: RentBody) => {
@@ -36,7 +38,17 @@ export default function useReservationManageFormLogics(): IUseReservationManageF
   );
 
   const deleteReservation = () => {
-    deleteMutation.mutate({ reservationNumber: values.reservationNumber });
+    deleteMutation.mutate(
+      { reservationNumber: values.reservationNumber },
+      {
+        onSuccess: () => {
+          useToast({
+            title: "Car Rental Successfully Withdrawn",
+            type: AlertType.SUCCESS,
+          });
+        },
+      }
+    );
   };
   const { values, ...rest } = useFormik<IUseReservationManageForm>({
     initialValues: {

@@ -1,4 +1,4 @@
-import { CarDTO } from "../ui/components/content/catalogue-section/types";
+import CarDTO from "../dto/car-dto";
 
 export async function getCars(): Promise<CarDTO[]> {
   const response = await fetch("http://localhost:8080/api/cars");

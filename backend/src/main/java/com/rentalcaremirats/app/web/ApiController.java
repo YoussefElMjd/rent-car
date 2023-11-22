@@ -97,7 +97,7 @@ public class ApiController {
     public String addCar(@RequestBody Rent rent) {
         rent.setReservationNumber(ReservatieUtil.generateReservationNumber());
         rentRepository.save(rent);
-        sendEmail(rent);
+        // sendEmail(rent);
         return "Car successfully added";
     }
 
