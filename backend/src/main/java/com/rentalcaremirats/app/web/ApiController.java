@@ -104,6 +104,10 @@ public class ApiController {
     @PostMapping("/rent/reservation")
     public ResponseEntity<Rent> getRentByReservationNumber(@RequestBody Rent rent) {
         Rent result = rentRepository.findByReservationNumber(rent.getReservationNumber());
+
+        if (result == null) {
+            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
         return new ResponseEntity<Rent>(result, HttpStatus.ACCEPTED);
     }
 

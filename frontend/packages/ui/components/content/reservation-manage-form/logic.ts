@@ -19,6 +19,14 @@ export default function useReservationManageFormLogics(): IUseReservationManageF
       );
 
       return response.data as RentDTO;
+    },
+    {
+      onError: () => {
+        useToast({
+          title: "Reservation not found",
+          type: AlertType.ERROR,
+        });
+      },
     }
   );
 
@@ -31,7 +39,7 @@ export default function useReservationManageFormLogics(): IUseReservationManageF
     },
     {
       onSuccess: () => {
-        mutation.mutate({ reservationNumber: values.reservationNumber });
+        mutation.reset();
         form.reservationNumber.onChange("");
       },
     }
@@ -45,6 +53,12 @@ export default function useReservationManageFormLogics(): IUseReservationManageF
           useToast({
             title: "Car Rental Successfully Withdrawn",
             type: AlertType.SUCCESS,
+          });
+        },
+        onError: () => {
+          useToast({
+            title: "Canno't Delete Reservation",
+            type: AlertType.ERROR,
           });
         },
       }

@@ -63,6 +63,7 @@ export default function ReservationManageForm() {
           endDateRent={rentData.endDateRent}
           phoneNumber={rentData.phoneNumber}
           totalPrice={"null"}
+          deleteReservation={deleteReservation}
         />
       )}
     </VStack>

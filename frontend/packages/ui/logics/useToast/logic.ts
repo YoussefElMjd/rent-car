@@ -6,7 +6,7 @@ export default function useToast(param: IToastProps) {
   if (param.type === AlertType.SUCCESS) {
     toast.success(param.title, {
       position: "bottom-center",
-      autoClose: 5000,
+      autoClose: 3000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
@@ -17,7 +17,7 @@ export default function useToast(param: IToastProps) {
   } else if (param.type === AlertType.ERROR) {
     toast.error(param.title, {
       position: "bottom-center",
-      autoClose: 5000,
+      autoClose: 3000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
