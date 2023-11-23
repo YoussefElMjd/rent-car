@@ -65,9 +65,11 @@ export default function CarCard(props: ICarCardProps) {
     >
       <Reveal>
         <Text
+          textAlign={"center"}
           color={COLORS.Secondary.value}
           fontSize={"1.25rem"}
           fontWeight={700}
+          lineHeight={"35px"}
         >
           {props.title}
         </Text>

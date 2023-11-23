@@ -28,3 +28,26 @@ export const Car = (props: React.SVGProps<SVGSVGElement>) => (
     </defs>
   </svg>
 );
+
+export const CarDescription = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg
+    {...props}
+    width={props.width ?? "30"}
+    height={props.height ?? "30"}
+    viewBox="0 0 30 30"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g clipPath="url(#clip0_189_1267)">
+      <path
+        d="M23.65 6.2625C23.4 5.525 22.7 5 21.875 5H8.125C7.3 5 6.6125 5.525 6.35 6.2625L3.75 13.75V23.75C3.75 24.4375 4.3125 25 5 25H6.25C6.9375 25 7.5 24.4375 7.5 23.75V22.5H22.5V23.75C22.5 24.4375 23.0625 25 23.75 25H25C25.6875 25 26.25 24.4375 26.25 23.75V13.75L23.65 6.2625ZM8.125 18.75C7.0875 18.75 6.25 17.9125 6.25 16.875C6.25 15.8375 7.0875 15 8.125 15C9.1625 15 10 15.8375 10 16.875C10 17.9125 9.1625 18.75 8.125 18.75ZM21.875 18.75C20.8375 18.75 20 17.9125 20 16.875C20 15.8375 20.8375 15 21.875 15C22.9125 15 23.75 15.8375 23.75 16.875C23.75 17.9125 22.9125 18.75 21.875 18.75ZM6.25 12.5L8.125 6.875H21.875L23.75 12.5H6.25Z"
+        fill="black"
+      />
+    </g>
+    <defs>
+      <clipPath id="clip0_189_1267">
+        <rect width="30" height="30" fill="white" />
+      </clipPath>
+    </defs>
+  </svg>
+);
