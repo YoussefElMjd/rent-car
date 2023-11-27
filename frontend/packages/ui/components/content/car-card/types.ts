@@ -4,7 +4,7 @@ import {
   RefetchQueryFilters,
 } from "react-query";
 import { IDefaultForm, IForm } from "../../../../utils/formik";
-import { CarDTO } from "../catalogue-section/types";
+import CarDTO from "../../../../dto/car-dto";
 export default interface IUseCarCardLogicsTypes {
   form: IForm<IUseCarCardForm> & IDefaultForm;
   unableDateRent?: Date[];

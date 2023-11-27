@@ -1,7 +1,7 @@
 import CarDTO from "../dto/car-dto";
 
 export async function getCars(): Promise<CarDTO[]> {
-  const response = await fetch("http://localhost:8080/api/cars");
+  const response = await fetch("http://3.8.153.194:8080/api/cars");
   const data = await response.json();
 
   const result: CarDTO[] = data.map((car: any) => ({

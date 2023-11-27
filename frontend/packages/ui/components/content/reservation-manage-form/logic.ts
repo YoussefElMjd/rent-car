@@ -14,7 +14,7 @@ export default function useReservationManageFormLogics(): IUseReservationManageF
   const mutation: UseMutationResult<RentDTO, unknown, RentBody> = useMutation(
     async (reservationNumber: RentBody) => {
       const response = await axios.post(
-        "http://localhost:8080/api/rent/reservation",
+        "http://3.8.153.194:8080/api/rent/reservation",
         reservationNumber
       );
 
@@ -33,7 +33,7 @@ export default function useReservationManageFormLogics(): IUseReservationManageF
   const deleteMutation = useMutation(
     (reservationNumber: RentBody) => {
       return axios.post(
-        "http://localhost:8080/api/rent/reservation/delete",
+        "http://3.8.153.194:8080/api/rent/reservation/delete",
         reservationNumber
       );
     },
