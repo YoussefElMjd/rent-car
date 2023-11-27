@@ -174,7 +174,7 @@ export default function ReservationCard(props: IReservationCardProps) {
             >
               If you have any further questions or concerns regarding this
               cancellation, please do not hesitate to contact our customer
-              support at help@rentalCarEmirats.com. We appreciate your
+              support at help@rentCarEmirats.com. We appreciate your
               understanding in this matter.
             </Text>
             <Text
@@ -185,7 +185,7 @@ export default function ReservationCard(props: IReservationCardProps) {
               fontWeight={"bold"}
               marginTop={"20px"}
             >
-              Thank you for considering RentalCarEmirats for your car rental
+              Thank you for considering RentCarEmirats for your car rental
               needs. We look forward to serving you in the future.
             </Text>
           </VStack>
