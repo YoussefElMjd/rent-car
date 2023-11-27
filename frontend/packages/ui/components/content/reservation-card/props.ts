@@ -7,6 +7,6 @@ export default interface IReservationCardProps {
   phoneNumber?: string;
   startDateRent?: string;
   endDateRent?: string;
-  totalPrice?: string;
+  totalPrice?: number;
   deleteReservation?: () => void;
 }

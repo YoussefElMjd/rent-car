@@ -95,7 +95,10 @@ public class ApiController {
 
     @PostMapping("/add/rent")
     public String addCar(@RequestBody Rent rent) {
+        Car car = carDB.findById(rent.getCar().getId()).get();
         rent.setReservationNumber(ReservatieUtil.generateReservationNumber());
+        rent.setTotalPrice(
+                ReservatieUtil.calcualteTotalPrice(rent.getStartDateRent(), rent.getEndDateRent(), car.getRentPrice()));
         rentRepository.save(rent);
         // sendEmail(rent);
         return "Car successfully added";

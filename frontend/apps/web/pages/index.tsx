@@ -20,7 +20,6 @@ export default function Home() {
   const scrollToSection = (section: string) => {
     switch (section) {
       case "home":
-        console.log(homeSectionRef);
         if (homeSectionRef.current != null) {
           return homeSectionRef.current.scrollIntoView({
             behavior: "smooth",
@@ -30,7 +29,6 @@ export default function Home() {
         break;
       case "step":
         if (stepSectionRef.current != null) {
-          console.log("step");
           return stepSectionRef.current.scrollIntoView({
             behavior: "smooth",
             block: "start",
@@ -39,7 +37,6 @@ export default function Home() {
         break;
       case "catalogue":
         if (catalogueSectionRef.current != null) {
-          console.log("catalogue");
           return catalogueSectionRef.current.scrollIntoView({
             behavior: "smooth",
             block: "start",

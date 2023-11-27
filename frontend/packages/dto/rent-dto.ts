@@ -8,4 +8,5 @@ export default interface RentDTO {
   startDateRent: string;
   endDateRent: string;
   car: CarDTO;
+  totalPrice: number;
 }

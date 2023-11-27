@@ -41,6 +41,7 @@ public class Rent {
     @ManyToOne
     @JoinColumn(name = "car")
     private Car car;
+    private double totalPrice;
     @NotNull()
     @JsonFormat(pattern = "dd-MM-yyyy")
     private LocalDate startDateRent;

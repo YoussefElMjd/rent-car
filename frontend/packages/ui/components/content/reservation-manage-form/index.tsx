@@ -62,7 +62,7 @@ export default function ReservationManageForm() {
           startDateRent={rentData.startDateRent}
           endDateRent={rentData.endDateRent}
           phoneNumber={rentData.phoneNumber}
-          totalPrice={"null"}
+          totalPrice={rentData.totalPrice}
           deleteReservation={deleteReservation}
         />
       )}
