@@ -2,7 +2,8 @@ import CarDTO from "../dto/car-dto";
 
 export async function getCars(): Promise<CarDTO[]> {
   const response = await fetch(
-    process.env.NEXT_PUBLIC_BACKEND_URL + "/api/cars"
+    process.env.NEXT_PUBLIC_BACKEND_URL + "/api/cars",
+    { referrerPolicy: "unsafe-url" }
   );
   const data = await response.json();
 

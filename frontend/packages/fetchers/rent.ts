@@ -1,6 +1,7 @@
 export async function getUnableDateRent(id: string): Promise<Date[]> {
   const response = await fetch(
-    process.env.NEXT_PUBLIC_BACKEND_URL + `/api/car/${id}/rent/unable_date`
+    process.env.NEXT_PUBLIC_BACKEND_URL + `/api/car/${id}/rent/unable_date`,
+    { referrerPolicy: "unsafe-url" }
   );
   const data = await response.json();
   const result: Date[] = data.map((value: string) => new Date(value));
