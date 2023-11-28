@@ -13,7 +13,10 @@ export const useCarCardLogic = (
 ): IUseCarCardLogicsTypes => {
   const mutation = useMutation(
     (newRent: RentBodyData) => {
-      return axios.post("http://3.8.153.194:8080/api/add/rent", newRent);
+      return axios.post(
+        process.env.NEXT_PUBLIC_BACKEND_URL + "/api/add/rent",
+        newRent
+      );
     },
     {
       onSuccess: () => {

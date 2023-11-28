@@ -1,11 +1,11 @@
 {
-  "name": "web",
+  "name": "frontend",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev -H 192.168.1.52",
     "build": "next build",
-    "start": "next start -p 8080",
+    "start": "next start -p 9000",
     "lint": "next lint"
   },
   "dependencies": {

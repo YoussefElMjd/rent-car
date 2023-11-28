@@ -1,11 +1,17 @@
 {
+  "name": "rentcaremirats-frontend",
+  "packageManager": "npm@9.8.1",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "private": true,
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "start": "next start -p 8080"
+    "start": "turbo start --scope=frontend"
   },
   "devDependencies": {
     "@types/react-date-range": "^1.4.8",
@@ -14,12 +20,6 @@
     "tsconfig": "*",
     "turbo": "latest"
   },
-  "name": "frontend",
-  "packageManager": "npm@9.8.1",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
   "dependencies": {
     "@chakra-ui/react": "^2.8.1",
     "@emotion/react": "^11.11.1",
