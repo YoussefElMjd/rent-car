@@ -23,8 +23,10 @@ jobs:
 
     steps:
       - name: Pull Docker frontend image
-        run: sudo docker pull youssefelmajdoul/rentcaremirats-frontend:latest
+        run: sudo docker stop rentcaremirats-frontend
       - name: Delete Docker frontend container
         run: sudo docker rm -f rentcaremirats-frontend || true
+      - name: Pull Docker frontend image
+        run: sudo docker pull youssefelmajdoul/rentcaremirats-frontend:latest
       - name: Run Docker container
         run: sudo docker run -d -p 90:9000 --name rentcaremirats-frontend youssefelmajdoul/rentcaremirats-frontend:latest
