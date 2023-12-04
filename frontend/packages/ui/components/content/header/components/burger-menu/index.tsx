@@ -16,6 +16,7 @@ import COLORS from "../../../../../constant/colors";
 import IBurgerMenuProps from "./props";
 import Button from "../../../../inputs/button";
 import Icon from "../../../../../contents/icon";
+import Text from "ui/components/content/text";
 export default function BurgerMenu(props: IBurgerMenuProps) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef(null);
@@ -101,18 +102,23 @@ export default function BurgerMenu(props: IBurgerMenuProps) {
           </DrawerBody>
 
           <DrawerFooter>
-            <Button
-              bgColor={COLORS.Primary.value}
-              color={COLORS.Third.value}
-              mr={3}
-              onClick={onClose}
-              hoverBgColor={"rgba(255,255,255,0.1)"}
+            <Stack
+              bgColor={COLORS.Secondary.value}
+              w="125px"
+              h="2.375rem"
+              borderRadius=".3125rem"
+              _hover={{
+                filter: "saturate(200%)",
+              }}
+              justifyContent={"center"}
+              alignItems={"center"}
             >
-              Cancel
-            </Button>
-            <Button bgColor={COLORS.Secondary.value} color={COLORS.Third.value}>
-              Save
-            </Button>
+              <Link href="/reservation">
+                <Text color={COLORS.Third.value} fontSize={".875rem"}>
+                  My Reservation
+                </Text>
+              </Link>
+            </Stack>
           </DrawerFooter>
         </DrawerContent>
       </Drawer>

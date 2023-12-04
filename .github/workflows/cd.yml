@@ -27,4 +27,4 @@ jobs:
       - name: Delete Docker frontend container
         run: sudo docker rm -f rentcaremirats-frontend || true
       - name: Run Docker container
-        run: sudo docker run -d -p 80:8080 --name rentcaremirats-frontend youssefelmajdoul/rentcaremirats-frontend:latest
+        run: sudo docker run -d -p 90:9000 --name rentcaremirats-frontend youssefelmajdoul/rentcaremirats-frontend:latest

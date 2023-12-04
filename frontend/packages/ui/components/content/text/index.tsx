@@ -6,7 +6,7 @@ import COLORS from "../../../constant/colors";
 export default function Text(props: ITextProps) {
   return (
     <HStack>
-      <Box h={props.h}>{props.startEnhancer}</Box>
+      {props.startEnhancer && <Box h={props.h}>{props.startEnhancer}</Box>}
       <ChakraText
         {...props}
         w={props.w ?? "fit-content"}
