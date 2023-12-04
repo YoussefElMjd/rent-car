@@ -12,13 +12,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: Go to the frontend folder
-        run: cd frontend && ls
       - name: Login DockerHub
         run: docker login -u ${{secrets.DOCKER_USERNAME}} -p ${{secrets.DOCKER_PASSWORD}}
 
       - name: Build the Docker frontend image
-        run: ls && docker build -t youssefelmajdoul/rentcaremirats-frontend:latest .
+        run: cd frontend && docker build -t youssefelmajdoul/rentcaremirats-frontend:latest .
 
       - name: Push the frontend to DockerHub
         run: docker push youssefelmajdoul/rentcaremirats-frontend:latest
@@ -27,7 +25,7 @@ jobs:
         run: cd ../backend
 
       - name: Build the Docker frontend image
-        run: docker build -t youssefelmajdoul/rentcaremirats-backend:latest .
+        run: cd backend && docker build -t youssefelmajdoul/rentcaremirats-backend:latest .
 
       - name: Push the frontend to DockerHub
         run: docker push youssefelmajdoul/rentcaremirats-backend:latest
