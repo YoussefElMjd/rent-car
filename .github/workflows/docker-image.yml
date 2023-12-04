@@ -2,26 +2,35 @@ name: Docker Image CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Login DockerHub
-      env:
-        DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
-        DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
-      run: docker login -u $DOCKER_USERNAME $DOCKER_PASSWORD
-      
-    - name: Build the Docker image
-      run: docker build -t rentcaremirats
+      - uses: actions/checkout@v3
+      - name: Go to the frontend folder
+        run: cd frontend
+      - name: Login DockerHub
+        env:
+          DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
+          DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
+        run: docker login -u $DOCKER_USERNAME $DOCKER_PASSWORD
 
-    - name: Push to DockerHun
-      run: docker push youssefelmajdoul/rentcaremirats:latest
+      - name: Build the Docker frontend image
+        run: docker build -t rentcaremirats
+
+      - name: Push the frontend to DockerHub
+        run: docker push youssefelmajdoul/rentcaremirats-frontend:latest
+
+      - name: Go to the backend folder
+        run: cd ../backend
+
+      - name: Build the Docker frontend image
+        run: docker build -t rentcaremirats
+
+      - name: Push the frontend to DockerHub
+        run: docker push youssefelmajdoul/rentcaremirats-backend:latest
