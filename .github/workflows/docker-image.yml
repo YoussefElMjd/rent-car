@@ -21,9 +21,6 @@ jobs:
       - name: Push the frontend to DockerHub
         run: docker push youssefelmajdoul/rentcaremirats-frontend:latest
 
-      - name: Go to the backend folder
-        run: cd ../backend
-
       - name: Build the Docker frontend image
         run: cd backend && docker build -t youssefelmajdoul/rentcaremirats-backend:latest .
 
