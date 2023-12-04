@@ -22,7 +22,7 @@ jobs:
         run: docker push youssefelmajdoul/rentcaremirats-frontend:latest
 
       - name: Build the Docker frontend image
-        run: cd backend && docker build -t youssefelmajdoul/rentcaremirats-backend:latest .
+        run: cd backend && mvn clean package && docker build -t youssefelmajdoul/rentcaremirats-backend:latest .
 
       - name: Push the frontend to DockerHub
         run: docker push youssefelmajdoul/rentcaremirats-backend:latest
