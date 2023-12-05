@@ -8,7 +8,7 @@ on:
 
 jobs:
   backend:
-    runs-on: backend
+    runs-on: backendv2
 
     steps:
       - name: Pull Docker backend image
@@ -19,7 +19,7 @@ jobs:
         run: sudo docker run -d -p 80:8080 --name rentcaremirats-backend youssefelmajdoul/rentcaremirats-backend:latest
 
   frontend:
-    runs-on: frontend
+    runs-on: frontendv2
 
     steps:
       - name: Pull Docker frontend image
