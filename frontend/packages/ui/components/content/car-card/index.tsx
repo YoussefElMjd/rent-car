@@ -58,7 +58,7 @@ export default function CarCard(props: ICarCardProps) {
     <VStack
       padding={"1.5rem"}
       bgColor={COLORS.Third.value}
-      w="25rem"
+      w="20rem"
       h="28.125rem"
       borderRadius={".625rem"}
       spacing={"0rem"}
