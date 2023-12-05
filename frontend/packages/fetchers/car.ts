@@ -7,13 +7,16 @@ export async function getCars(): Promise<CarDTO[]> {
   );
   const data = await response.json();
 
-  const result: CarDTO[] = data.map((car: any) => ({
-    id: car.id,
-    carName: car.carName,
-    carPower: car.carPower,
-    carDeposit: car.carDeposit,
-    rentPrice: car.rentPrice,
-  }));
+  const result: CarDTO[] = data.map((car: any) => {
+    return {
+      id: car.id,
+      carName: car.carName,
+      carPower: car.carPower,
+      carDeposit: car.carDeposit,
+      rentPrice: car.rentPrice,
+      imageUrls: car.imageUrls,
+    };
+  });
 
   return result;
 }

@@ -1,11 +1,14 @@
 package com.rentalcaremirats.app.model;
 
 import jakarta.persistence.CascadeType;
+import jakarta.persistence.CollectionTable;
 import jakarta.persistence.Column;
+import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
@@ -45,6 +48,10 @@ public class Car {
     @JsonBackReference
     @OneToMany(mappedBy = "car")
     private List<Rent> rents = new ArrayList<Rent>();
+    @ElementCollection
+    @CollectionTable(name = "car_images", joinColumns = @JoinColumn(name = "car_id"))
+    @Column(name = "image_urls")
+    private List<String> imageUrls = new ArrayList<String>();
 
     @Override
     public String toString() {

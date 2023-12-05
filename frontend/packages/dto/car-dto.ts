@@ -4,4 +4,5 @@ export default interface CarDTO {
   carPower?: number;
   carDeposit?: number;
   rentPrice?: number;
+  imageUrls?: string[];
 }

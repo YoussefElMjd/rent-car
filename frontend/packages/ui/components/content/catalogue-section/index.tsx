@@ -7,6 +7,7 @@ import { useCatalogueLogics } from "./logic";
 
 export default function CatalogueSection(props: ICatalogueProps) {
   const { carData } = useCatalogueLogics();
+
   return (
     <VStack
       ref={props.ref}
@@ -30,16 +31,11 @@ export default function CatalogueSection(props: ICatalogueProps) {
         {carData?.map((car) => (
           <CarCard
             title={car.carName}
-            pictures={[
-              "/images/class_g/Class_G_Orange_outside_front.jpg",
-              "/images/class_g/Class_G_Orange_outside.jpg",
-              "/images/class_g/Class_G_Orange_inside.jpg",
-            ]}
+            pictures={car.imageUrls}
             pricePerDay={car.rentPrice}
             carId={car.id}
           />
         ))}
-        {/* {car.map((element, i) => element)} */}
       </HStack>
     </VStack>
   );
