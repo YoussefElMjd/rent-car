@@ -179,7 +179,7 @@ public class ApiController {
                 "        </div>\n" +
                 "        <div class=\"footer\">\n" +
                 "            <p>Thank you for choosing RentCarEmirats for your car rental needs.</p>\n" +
-                "            <p>Best regards,<br>RentCarEmirats<br>https://rental-car-emirats.vercel.app/</p>\n" +
+                "            <p>Best regards,<br>RentCarEmirats<br>http://18.130.236.198:90</p>\n" +
                 "        </div>\n" +
                 "    </div>\n" +
                 "</body>\n" +
