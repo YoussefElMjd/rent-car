@@ -64,6 +64,7 @@ export default function ReservationManageForm() {
           phoneNumber={rentData.phoneNumber}
           totalPrice={rentData.totalPrice}
           deleteReservation={deleteReservation}
+          carImageUrl={rentData.car.imageUrls && rentData.car.imageUrls[0]}
         />
       )}
     </VStack>

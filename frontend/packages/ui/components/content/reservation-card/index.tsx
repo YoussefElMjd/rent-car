@@ -36,7 +36,7 @@ export default function ReservationCard(props: IReservationCardProps) {
         <Image
           h="600px"
           w="1000px"
-          src="/images/class_g/Class_G_Orange_outside_front.jpg"
+          src={props.carImageUrl}
           borderTopLeftRadius={"25px"}
           borderTopRightRadius={{
             base: "25px",

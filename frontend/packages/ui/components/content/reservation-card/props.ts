@@ -9,4 +9,5 @@ export default interface IReservationCardProps {
   endDateRent?: string;
   totalPrice?: number;
   deleteReservation?: () => void;
+  carImageUrl?: string;
 }
