@@ -17,7 +17,7 @@ VALUES (
             FROM car
             WHERE car_name = 'Class G Mansory'
         ),
-        'https://rentcar-storage.s3.eu-west-2.amazonaws.com/images/class_g/0.jpg'
+        'https://rentcar-storage.s3.eu-west-2.amazonaws.com/images/class_g_mansory/0.jpg'
     ),
     (
         (
@@ -25,7 +25,7 @@ VALUES (
             FROM car
             WHERE car_name = 'Class G Mansory'
         ),
-        'https://rentcar-storage.s3.eu-west-2.amazonaws.com/images/class_g/1.jpg'
+        'https://rentcar-storage.s3.eu-west-2.amazonaws.com/images/class_g_mansory/1.jpg'
     ),
     (
         (
@@ -33,7 +33,7 @@ VALUES (
             FROM car
             WHERE car_name = 'Class G Mansory'
         ),
-        'https://rentcar-storage.s3.eu-west-2.amazonaws.com/images/class_g/2.jpg'
+        'https://rentcar-storage.s3.eu-west-2.amazonaws.com/images/class_g_mansory/2.jpg'
     );
 INSERT INTO car (
         car_name,
