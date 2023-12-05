@@ -100,7 +100,7 @@ public class ApiController {
         rent.setTotalPrice(
                 ReservatieUtil.calcualteTotalPrice(rent.getStartDateRent(), rent.getEndDateRent(), car.getRentPrice()));
         rentRepository.save(rent);
-        // sendEmail(rent);
+        sendEmail(rent);
         return "Car successfully added";
     }
 
