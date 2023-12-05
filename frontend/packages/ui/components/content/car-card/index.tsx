@@ -58,7 +58,7 @@ export default function CarCard(props: ICarCardProps) {
     <VStack
       padding={"1.5rem"}
       bgColor={COLORS.Third.value}
-      w="19rem"
+      w="25rem"
       h="28.125rem"
       borderRadius={".625rem"}
       spacing={"0rem"}
@@ -75,12 +75,13 @@ export default function CarCard(props: ICarCardProps) {
         </Text>
       </Reveal>
       <Reveal>
-        <Stack h={"18.75rem"} w="full" position={"relative"}>
-          <Img
-            height="18.75rem"
-            src={props.pictures && props.pictures[1]}
-            onClick={onOpen}
-          />
+        <Stack
+          h={"18.75rem"}
+          w="full"
+          position={"relative"}
+          justifyContent={"center"}
+        >
+          <Img src={props.pictures && props.pictures[1]} onClick={onOpen} />
         </Stack>
       </Reveal>
       <Reveal>
