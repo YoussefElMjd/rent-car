@@ -68,7 +68,7 @@ export default function Footer() {
               <Icon name="snapchat" />
             </Link>
             <Link
-              href="https://www.instagram.com/rentacaremirats/"
+              href="https://www.instagram.com/mmm_location/"
               isExternal
               w={"2.0625rem"}
               h={"2.0625rem"}
@@ -112,7 +112,7 @@ export default function Footer() {
               { title: "Discord", href: "" },
               {
                 title: "Instagram",
-                href: "https://www.instagram.com/rentacaremirats/",
+                href: "https://www.instagram.com/mmm_location/",
               },
               { title: "Twitter", href: "" },
               { title: "Facebook", href: "" },

@@ -67,7 +67,7 @@ export default function CarCard(props: ICarCardProps) {
         <Text
           textAlign={"center"}
           color={COLORS.Secondary.value}
-          fontSize={"1.25rem"}
+          fontSize={"19px"}
           fontWeight={700}
           lineHeight={"35px"}
         >
@@ -81,7 +81,12 @@ export default function CarCard(props: ICarCardProps) {
           position={"relative"}
           justifyContent={"center"}
         >
-          <Img src={props.pictures && props.pictures[1]} onClick={onOpen} />
+          <Img
+            h={"18.75rem"}
+            src={props.pictures && props.pictures[1]}
+            onClick={onOpen}
+            objectFit={"cover"}
+          />
         </Stack>
       </Reveal>
       <Reveal>
@@ -173,7 +178,11 @@ export default function CarCard(props: ICarCardProps) {
                 >
                   <motion.img
                     animate={controls}
-                    style={{ height: "43.75rem", borderRadius: "1.5625rem" }}
+                    style={{
+                      height: "43.75rem",
+                      borderRadius: "1.5625rem",
+                      objectFit: "contain",
+                    }}
                     src={props.pictures && props.pictures[index]}
                   />
                 </Box>
@@ -204,6 +213,7 @@ export default function CarCard(props: ICarCardProps) {
                           borderRadius={"1.5625rem"}
                           src={e}
                           key="i"
+                          objectFit={"contain"}
                         />
                       );
                     })}
