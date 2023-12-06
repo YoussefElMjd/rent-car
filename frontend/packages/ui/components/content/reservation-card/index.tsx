@@ -35,7 +35,9 @@ export default function ReservationCard(props: IReservationCardProps) {
       <VStack spacing={"0px"} h="full">
         <Image
           h="600px"
+          minH={"600px"}
           w="1000px"
+          objectFit={"cover"}
           src={props.carImageUrl}
           borderTopLeftRadius={"25px"}
           borderTopRightRadius={{
